@@ -26,7 +26,7 @@ Partial Class App
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblHeaderTitle = New System.Windows.Forms.Label()
         Me.pnlTopUI = New System.Windows.Forms.Panel()
         Me.pnlTabs = New System.Windows.Forms.Panel()
         Me.pnlBtnCitas = New System.Windows.Forms.Panel()
@@ -42,7 +42,7 @@ Partial Class App
         Me.btnRecents = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnCelHome = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlCelGoBack = New System.Windows.Forms.Panel()
         Me.btnGoBack = New System.Windows.Forms.Button()
         Me.pnlContainer.SuspendLayout()
         Me.pnlMain.SuspendLayout()
@@ -55,7 +55,7 @@ Partial Class App
         Me.pnlBttmUI.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.pnlCelGoBack.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlContainer
@@ -84,22 +84,22 @@ Partial Class App
         'pnlHeader
         '
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(106, Byte), Integer), CType(CType(171, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.pnlHeader.Controls.Add(Me.Label1)
+        Me.pnlHeader.Controls.Add(Me.lblHeaderTitle)
         Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlHeader.Location = New System.Drawing.Point(0, 28)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(269, 70)
+        Me.pnlHeader.Size = New System.Drawing.Size(269, 58)
         Me.pnlHeader.TabIndex = 1
         '
-        'Label1
+        'lblHeaderTitle
         '
-        Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(75, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(120, 39)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "NOMBRE EMPRESA"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblHeaderTitle.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeaderTitle.Location = New System.Drawing.Point(75, 0)
+        Me.lblHeaderTitle.Name = "lblHeaderTitle"
+        Me.lblHeaderTitle.Size = New System.Drawing.Size(120, 58)
+        Me.lblHeaderTitle.TabIndex = 1
+        Me.lblHeaderTitle.Text = "NOMBRE EMPRESA"
+        Me.lblHeaderTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTopUI
         '
@@ -212,7 +212,7 @@ Partial Class App
         Me.pnlBttmUI.BackColor = System.Drawing.Color.Silver
         Me.pnlBttmUI.Controls.Add(Me.Panel3)
         Me.pnlBttmUI.Controls.Add(Me.Panel2)
-        Me.pnlBttmUI.Controls.Add(Me.Panel1)
+        Me.pnlBttmUI.Controls.Add(Me.pnlCelGoBack)
         Me.pnlBttmUI.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnlBttmUI.Location = New System.Drawing.Point(0, 488)
         Me.pnlBttmUI.Name = "pnlBttmUI"
@@ -261,13 +261,13 @@ Partial Class App
         Me.btnCelHome.TabIndex = 1
         Me.btnCelHome.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'pnlCelGoBack
         '
-        Me.Panel1.Controls.Add(Me.btnGoBack)
-        Me.Panel1.Location = New System.Drawing.Point(46, 3)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(54, 46)
-        Me.Panel1.TabIndex = 5
+        Me.pnlCelGoBack.Controls.Add(Me.btnGoBack)
+        Me.pnlCelGoBack.Location = New System.Drawing.Point(46, 3)
+        Me.pnlCelGoBack.Name = "pnlCelGoBack"
+        Me.pnlCelGoBack.Size = New System.Drawing.Size(54, 46)
+        Me.pnlCelGoBack.TabIndex = 5
         '
         'btnGoBack
         '
@@ -303,7 +303,7 @@ Partial Class App
         Me.pnlBttmUI.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
+        Me.pnlCelGoBack.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -321,12 +321,12 @@ Partial Class App
     Friend WithEvents btnHome As Button
     Friend WithEvents btnRecents As Button
     Friend WithEvents pnlHeader As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblHeaderTitle As Label
     Friend WithEvents pnlTopUI As Panel
     Friend WithEvents pnlBttmUI As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnCelHome As Button
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnlCelGoBack As Panel
     Friend WithEvents btnGoBack As Button
 End Class
