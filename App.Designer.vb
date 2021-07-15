@@ -25,7 +25,6 @@ Partial Class App
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(App))
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeaderTitle = New System.Windows.Forms.Label()
         Me.pnlTopUI = New System.Windows.Forms.Panel()
@@ -39,9 +38,9 @@ Partial Class App
         Me.pnlBtnHome = New System.Windows.Forms.Panel()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.pnlBttmUI = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pnlRecentCel = New System.Windows.Forms.Panel()
         Me.btnRecents = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlHomeCel = New System.Windows.Forms.Panel()
         Me.btnCelHome = New System.Windows.Forms.Button()
         Me.pnlCelGoBack = New System.Windows.Forms.Panel()
         Me.btnGoBack = New System.Windows.Forms.Button()
@@ -54,8 +53,8 @@ Partial Class App
         Me.pnlBtnAccount.SuspendLayout()
         Me.pnlBtnHome.SuspendLayout()
         Me.pnlBttmUI.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pnlRecentCel.SuspendLayout()
+        Me.pnlHomeCel.SuspendLayout()
         Me.pnlCelGoBack.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,7 +71,6 @@ Partial Class App
         'pnlMain
         '
         Me.pnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.pnlMain.Controls.Add(Me.Panel1)
         Me.pnlMain.Controls.Add(Me.pnlHeader)
         Me.pnlMain.Controls.Add(Me.pnlTopUI)
         Me.pnlMain.Controls.Add(Me.pnlTabs)
@@ -82,15 +80,6 @@ Partial Class App
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(414, 736)
         Me.pnlMain.TabIndex = 2
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Red
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 86)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(414, 500)
-        Me.Panel1.TabIndex = 5
         '
         'pnlHeader
         '
@@ -226,8 +215,8 @@ Partial Class App
         'pnlBttmUI
         '
         Me.pnlBttmUI.BackColor = System.Drawing.Color.Silver
-        Me.pnlBttmUI.Controls.Add(Me.Panel3)
-        Me.pnlBttmUI.Controls.Add(Me.Panel2)
+        Me.pnlBttmUI.Controls.Add(Me.pnlRecentCel)
+        Me.pnlBttmUI.Controls.Add(Me.pnlHomeCel)
         Me.pnlBttmUI.Controls.Add(Me.pnlCelGoBack)
         Me.pnlBttmUI.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnlBttmUI.Location = New System.Drawing.Point(0, 684)
@@ -235,13 +224,13 @@ Partial Class App
         Me.pnlBttmUI.Size = New System.Drawing.Size(414, 52)
         Me.pnlBttmUI.TabIndex = 0
         '
-        'Panel3
+        'pnlRecentCel
         '
-        Me.Panel3.Controls.Add(Me.btnRecents)
-        Me.Panel3.Location = New System.Drawing.Point(246, 3)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(54, 46)
-        Me.Panel3.TabIndex = 7
+        Me.pnlRecentCel.Controls.Add(Me.btnRecents)
+        Me.pnlRecentCel.Location = New System.Drawing.Point(246, 3)
+        Me.pnlRecentCel.Name = "pnlRecentCel"
+        Me.pnlRecentCel.Size = New System.Drawing.Size(54, 46)
+        Me.pnlRecentCel.TabIndex = 7
         '
         'btnRecents
         '
@@ -256,13 +245,13 @@ Partial Class App
         Me.btnRecents.TabIndex = 2
         Me.btnRecents.UseVisualStyleBackColor = True
         '
-        'Panel2
+        'pnlHomeCel
         '
-        Me.Panel2.Controls.Add(Me.btnCelHome)
-        Me.Panel2.Location = New System.Drawing.Point(170, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(54, 46)
-        Me.Panel2.TabIndex = 6
+        Me.pnlHomeCel.Controls.Add(Me.btnCelHome)
+        Me.pnlHomeCel.Location = New System.Drawing.Point(170, 3)
+        Me.pnlHomeCel.Name = "pnlHomeCel"
+        Me.pnlHomeCel.Size = New System.Drawing.Size(54, 46)
+        Me.pnlHomeCel.TabIndex = 6
         '
         'btnCelHome
         '
@@ -317,8 +306,8 @@ Partial Class App
         Me.pnlBtnAccount.ResumeLayout(False)
         Me.pnlBtnHome.ResumeLayout(False)
         Me.pnlBttmUI.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
+        Me.pnlRecentCel.ResumeLayout(False)
+        Me.pnlHomeCel.ResumeLayout(False)
         Me.pnlCelGoBack.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -339,11 +328,10 @@ Partial Class App
     Friend WithEvents pnlBtnHome As Panel
     Friend WithEvents btnHome As Button
     Friend WithEvents pnlBttmUI As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents pnlRecentCel As Panel
     Friend WithEvents btnRecents As Button
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlHomeCel As Panel
     Friend WithEvents btnCelHome As Button
     Friend WithEvents pnlCelGoBack As Panel
     Friend WithEvents btnGoBack As Button
-    Friend WithEvents Panel1 As Panel
 End Class
