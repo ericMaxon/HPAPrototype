@@ -1,5 +1,8 @@
 ﻿Public Class App
 
+    Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnHome_Click(Me, EventArgs.Empty)
+    End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
         Dim pantalla As Form
@@ -45,5 +48,6 @@
     Private Sub btnCelHome_Click(sender As Object, e As EventArgs) Handles btnCelHome.Click
         Application.Exit()
     End Sub
+
 #End Region
 End Class
