@@ -30,14 +30,15 @@ Partial Class HomeForm
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(152, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 13)
+        Me.Label1.Size = New System.Drawing.Size(98, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "HOME SCREEN"
+        Me.Label1.Text = "MENU PRINCIPAL"
         '
         'HomeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(398, 461)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label1)

@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>El síntoma más obvio es el aumento de peso, por lo
+que los síntomas depénderan de este aumento de peso que,
+entre otros pueden ser:
+- Dificultad para dormir
+- Dolor de espalda y/o en las articulaciones
+- Sudoración excesiva
+- Intolerancia al calor
+</value>
+  </data>
 </root>
