@@ -107,6 +107,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Utilidades\Funciones.vb" />
+    <Compile Include="Utilidades\Navegar.vb" />
     <Compile Include="Ventanas\AccountForm.Designer.vb">
       <DependentUpon>AccountForm.vb</DependentUpon>
     </Compile>
