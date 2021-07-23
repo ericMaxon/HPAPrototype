@@ -1,7 +1,14 @@
 ﻿Public Class App
+    Public conn As New Controlador()
 
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnHome_Click(Me, EventArgs.Empty)
+        ' Dim respuesta = conn.obtenerDatos("Select * from Usuario where TipoDeUsuario = 'DOC'")
+        'If respuesta.HasRows Then
+        ' While respuesta.Read()
+        'MsgBox($"{respuesta("Cedula")} {respuesta("Nombre")} {respuesta("Telefono")}", vbOK, "A ver")
+        'End While
+        'End If
     End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
