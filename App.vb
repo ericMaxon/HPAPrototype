@@ -64,6 +64,10 @@
         Application.Exit()
     End Sub
 
+    Private Sub lblHeaderTitle_Click(sender As Object, e As EventArgs) Handles lblHeaderTitle.Click
+
+    End Sub
+
 
 #End Region
 End Class
