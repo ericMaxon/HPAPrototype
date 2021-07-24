@@ -65,7 +65,7 @@ Partial Class App
         Me.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContainer.Location = New System.Drawing.Point(0, 0)
         Me.pnlContainer.Name = "pnlContainer"
-        Me.pnlContainer.Size = New System.Drawing.Size(414, 788)
+        Me.pnlContainer.Size = New System.Drawing.Size(414, 729)
         Me.pnlContainer.TabIndex = 0
         '
         'pnlMain
@@ -78,7 +78,7 @@ Partial Class App
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMain.Location = New System.Drawing.Point(0, 0)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(414, 788)
+        Me.pnlMain.Size = New System.Drawing.Size(414, 729)
         Me.pnlMain.TabIndex = 2
         '
         'pnlHeader
@@ -119,7 +119,7 @@ Partial Class App
         Me.pnlTabs.Controls.Add(Me.pnlBtnAccount)
         Me.pnlTabs.Controls.Add(Me.pnlBtnHome)
         Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 638)
+        Me.pnlTabs.Location = New System.Drawing.Point(0, 579)
         Me.pnlTabs.Name = "pnlTabs"
         Me.pnlTabs.Size = New System.Drawing.Size(414, 98)
         Me.pnlTabs.TabIndex = 1
@@ -219,7 +219,7 @@ Partial Class App
         Me.pnlBttmUI.Controls.Add(Me.pnlHomeCel)
         Me.pnlBttmUI.Controls.Add(Me.pnlCelGoBack)
         Me.pnlBttmUI.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlBttmUI.Location = New System.Drawing.Point(0, 736)
+        Me.pnlBttmUI.Location = New System.Drawing.Point(0, 677)
         Me.pnlBttmUI.Name = "pnlBttmUI"
         Me.pnlBttmUI.Size = New System.Drawing.Size(414, 52)
         Me.pnlBttmUI.TabIndex = 0
@@ -291,7 +291,7 @@ Partial Class App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 788)
+        Me.ClientSize = New System.Drawing.Size(414, 729)
         Me.Controls.Add(Me.pnlContainer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "App"

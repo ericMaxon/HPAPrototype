@@ -80,7 +80,6 @@
       <DependentUpon>App.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controlador\Controlador.vb" />
     <Compile Include="DB_ProyectoFInal2021DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,7 +88,7 @@
     <Compile Include="DB_ProyectoFInal2021DataSet.vb">
       <DependentUpon>DB_ProyectoFInal2021DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\Doctor.vb" />
+    <Compile Include="Entidades\Cita.vb" />
     <Compile Include="Entidades\Paciente.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

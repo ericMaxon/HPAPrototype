@@ -55,10 +55,5 @@
     Private Sub btnCelHome_Click(sender As Object, e As EventArgs) Handles btnCelHome.Click
         Application.Exit()
     End Sub
-
-    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
-
-    End Sub
-
 #End Region
 End Class
