@@ -131,6 +131,48 @@
     <Compile Include="Ventanas\MedsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventanas\Mensajes\CitaAForm.Designer.vb">
+      <DependentUpon>CitaAForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CitaAForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CompraEForm.Designer.vb">
+      <DependentUpon>CompraEForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CompraEForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FarmaciasForm.Designer.vb">
+      <DependentUpon>FarmaciasForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FarmaciasForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FinalizarForm.Designer.vb">
+      <DependentUpon>FinalizarForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FinalizarForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\InventarioBForm.Designer.vb">
+      <DependentUpon>InventarioBForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\InventarioBForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\SolicitudForm.Designer.vb">
+      <DependentUpon>SolicitudForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\SolicitudForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\QuotesForm.Designer.vb">
       <DependentUpon>QuotesForm.vb</DependentUpon>
     </Compile>
@@ -160,6 +202,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\MedsForm.resx">
       <DependentUpon>MedsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\CitaAForm.resx">
+      <DependentUpon>CitaAForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\CompraEForm.resx">
+      <DependentUpon>CompraEForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\FarmaciasForm.resx">
+      <DependentUpon>FarmaciasForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\FinalizarForm.resx">
+      <DependentUpon>FinalizarForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\InventarioBForm.resx">
+      <DependentUpon>InventarioBForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\SolicitudForm.resx">
+      <DependentUpon>SolicitudForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\QuotesForm.resx">
       <DependentUpon>QuotesForm.vb</DependentUpon>

@@ -26,10 +26,15 @@ Partial Class App
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.lblHeaderTitle = New System.Windows.Forms.Label()
         Me.pnlTopUI = New System.Windows.Forms.Panel()
         Me.pnlTabs = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlBtnCitas = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCitas = New System.Windows.Forms.Button()
         Me.pnlBtnMed = New System.Windows.Forms.Panel()
         Me.btnMedicamentos = New System.Windows.Forms.Button()
@@ -84,12 +89,25 @@ Partial Class App
         'pnlHeader
         '
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlHeader.Controls.Add(Me.btnExit)
         Me.pnlHeader.Controls.Add(Me.lblHeaderTitle)
         Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlHeader.Location = New System.Drawing.Point(0, 28)
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(414, 58)
         Me.pnlHeader.TabIndex = 1
+        '
+        'btnExit
+        '
+        Me.btnExit.BackgroundImage = CType(resources.GetObject("btnExit.BackgroundImage"), System.Drawing.Image)
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Location = New System.Drawing.Point(365, 12)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(37, 33)
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'lblHeaderTitle
         '
@@ -99,7 +117,7 @@ Partial Class App
         Me.lblHeaderTitle.Name = "lblHeaderTitle"
         Me.lblHeaderTitle.Size = New System.Drawing.Size(414, 58)
         Me.lblHeaderTitle.TabIndex = 1
-        Me.lblHeaderTitle.Text = "NOMBRE EMPRESA"
+        Me.lblHeaderTitle.Text = "EMPRESEA SYJE"
         Me.lblHeaderTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTopUI
@@ -114,6 +132,9 @@ Partial Class App
         'pnlTabs
         '
         Me.pnlTabs.BackColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlTabs.Controls.Add(Me.Label4)
+        Me.pnlTabs.Controls.Add(Me.Label3)
+        Me.pnlTabs.Controls.Add(Me.Label1)
         Me.pnlTabs.Controls.Add(Me.pnlBtnCitas)
         Me.pnlTabs.Controls.Add(Me.pnlBtnMed)
         Me.pnlTabs.Controls.Add(Me.pnlBtnAccount)
@@ -124,13 +145,50 @@ Partial Class App
         Me.pnlTabs.Size = New System.Drawing.Size(414, 98)
         Me.pnlTabs.TabIndex = 1
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(335, 66)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Cuenta"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(217, 66)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Medicamentos"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(23, 66)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Menú Principal"
+        '
         'pnlBtnCitas
         '
+        Me.pnlBtnCitas.Controls.Add(Me.Label2)
         Me.pnlBtnCitas.Controls.Add(Me.btnCitas)
         Me.pnlBtnCitas.Location = New System.Drawing.Point(116, 6)
         Me.pnlBtnCitas.Name = "pnlBtnCitas"
         Me.pnlBtnCitas.Size = New System.Drawing.Size(73, 73)
         Me.pnlBtnCitas.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(19, 60)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(30, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Citas"
         '
         'btnCitas
         '
@@ -301,7 +359,9 @@ Partial Class App
         Me.pnlMain.ResumeLayout(False)
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlTabs.ResumeLayout(False)
+        Me.pnlTabs.PerformLayout()
         Me.pnlBtnCitas.ResumeLayout(False)
+        Me.pnlBtnCitas.PerformLayout()
         Me.pnlBtnMed.ResumeLayout(False)
         Me.pnlBtnAccount.ResumeLayout(False)
         Me.pnlBtnHome.ResumeLayout(False)
@@ -334,4 +394,9 @@ Partial Class App
     Friend WithEvents btnCelHome As Button
     Friend WithEvents pnlCelGoBack As Panel
     Friend WithEvents btnGoBack As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnExit As Button
 End Class
