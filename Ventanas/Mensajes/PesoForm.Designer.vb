@@ -75,11 +75,14 @@ Partial Class PesoForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(388, 185)
+        Me.ControlBox = False
         Me.Controls.Add(Me.PesoBox)
         Me.Controls.Add(Me.RegistroLabel)
         Me.Controls.Add(Me.PesoLabel)
         Me.Controls.Add(Me.IngresarButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "PesoForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Peso"
         Me.ResumeLayout(False)
         Me.PerformLayout()

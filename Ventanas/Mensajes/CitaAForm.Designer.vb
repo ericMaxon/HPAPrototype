@@ -24,10 +24,12 @@ Partial Class CitaAForm
     Private Sub InitializeComponent()
         Me.OkCitaAButton = New System.Windows.Forms.Button()
         Me.CitaALabel = New System.Windows.Forms.Label()
-        Me.DateTime = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblDoctor = New System.Windows.Forms.Label()
         Me.DoctorLabel = New System.Windows.Forms.Label()
         Me.FechaLabel = New System.Windows.Forms.Label()
+        Me.lblFecha = New System.Windows.Forms.Label()
+        Me.lblHora = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'OkCitaAButton
@@ -51,26 +53,19 @@ Partial Class CitaAForm
         Me.CitaALabel.TabIndex = 1
         Me.CitaALabel.Text = "Cita Agendada"
         '
-        'DateTime
+        'lblDoctor
         '
-        Me.DateTime.Location = New System.Drawing.Point(209, 84)
-        Me.DateTime.Name = "DateTime"
-        Me.DateTime.Size = New System.Drawing.Size(200, 20)
-        Me.DateTime.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(206, 142)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Label1"
+        Me.lblDoctor.AutoSize = True
+        Me.lblDoctor.Location = New System.Drawing.Point(267, 142)
+        Me.lblDoctor.Name = "lblDoctor"
+        Me.lblDoctor.Size = New System.Drawing.Size(39, 13)
+        Me.lblDoctor.TabIndex = 3
+        Me.lblDoctor.Text = "Label1"
         '
         'DoctorLabel
         '
         Me.DoctorLabel.AutoSize = True
-        Me.DoctorLabel.Location = New System.Drawing.Point(130, 142)
+        Me.DoctorLabel.Location = New System.Drawing.Point(203, 142)
         Me.DoctorLabel.Name = "DoctorLabel"
         Me.DoctorLabel.Size = New System.Drawing.Size(42, 13)
         Me.DoctorLabel.TabIndex = 4
@@ -79,11 +74,38 @@ Partial Class CitaAForm
         'FechaLabel
         '
         Me.FechaLabel.AutoSize = True
-        Me.FechaLabel.Location = New System.Drawing.Point(130, 90)
+        Me.FechaLabel.Location = New System.Drawing.Point(118, 90)
         Me.FechaLabel.Name = "FechaLabel"
         Me.FechaLabel.Size = New System.Drawing.Size(40, 13)
         Me.FechaLabel.TabIndex = 5
         Me.FechaLabel.Text = "Fecha:"
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Location = New System.Drawing.Point(194, 90)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(39, 13)
+        Me.lblFecha.TabIndex = 6
+        Me.lblFecha.Text = "Label2"
+        '
+        'lblHora
+        '
+        Me.lblHora.AutoSize = True
+        Me.lblHora.Location = New System.Drawing.Point(343, 90)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(39, 13)
+        Me.lblHora.TabIndex = 8
+        Me.lblHora.Text = "Label3"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(267, 90)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(33, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Hora:"
         '
         'CitaAForm
         '
@@ -91,13 +113,18 @@ Partial Class CitaAForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(491, 277)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.lblHora)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.FechaLabel)
         Me.Controls.Add(Me.DoctorLabel)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DateTime)
+        Me.Controls.Add(Me.lblDoctor)
         Me.Controls.Add(Me.CitaALabel)
         Me.Controls.Add(Me.OkCitaAButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CitaAForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cita Agendada"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -106,8 +133,10 @@ Partial Class CitaAForm
 
     Friend WithEvents OkCitaAButton As Button
     Friend WithEvents CitaALabel As Label
-    Friend WithEvents DateTime As DateTimePicker
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblDoctor As Label
     Friend WithEvents DoctorLabel As Label
     Friend WithEvents FechaLabel As Label
+    Friend WithEvents lblFecha As Label
+    Friend WithEvents lblHora As Label
+    Friend WithEvents Label4 As Label
 End Class
