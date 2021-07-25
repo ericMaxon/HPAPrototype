@@ -55,9 +55,9 @@ Partial Class SolicitudForm
         Me.SolicitudLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SolicitudLabel.Location = New System.Drawing.Point(178, 9)
         Me.SolicitudLabel.Name = "SolicitudLabel"
-        Me.SolicitudLabel.Size = New System.Drawing.Size(103, 25)
+        Me.SolicitudLabel.Size = New System.Drawing.Size(181, 25)
         Me.SolicitudLabel.TabIndex = 2
-        Me.SolicitudLabel.Text = "Solicitud"
+        Me.SolicitudLabel.Text = "Solicitud de cita"
         '
         'NombreBox
         '

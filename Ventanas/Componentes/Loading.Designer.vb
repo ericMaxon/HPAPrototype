@@ -37,7 +37,7 @@ Partial Class Loading
         Me.pnlLoading.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlLoading.Location = New System.Drawing.Point(0, 0)
         Me.pnlLoading.Name = "pnlLoading"
-        Me.pnlLoading.Size = New System.Drawing.Size(398, 666)
+        Me.pnlLoading.Size = New System.Drawing.Size(398, 382)
         Me.pnlLoading.TabIndex = 0
         '
         'loadingAnimation
@@ -46,7 +46,7 @@ Partial Class Loading
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.loadingAnimation.Image = CType(resources.GetObject("loadingAnimation.Image"), System.Drawing.Image)
-        Me.loadingAnimation.Location = New System.Drawing.Point(87, 242)
+        Me.loadingAnimation.Location = New System.Drawing.Point(91, 87)
         Me.loadingAnimation.Name = "loadingAnimation"
         Me.loadingAnimation.Size = New System.Drawing.Size(200, 200)
         Me.loadingAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -57,7 +57,7 @@ Partial Class Loading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(398, 666)
+        Me.ClientSize = New System.Drawing.Size(398, 382)
         Me.ControlBox = False
         Me.Controls.Add(Me.pnlLoading)
         Me.Name = "Loading"

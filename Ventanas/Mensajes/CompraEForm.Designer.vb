@@ -29,6 +29,7 @@ Partial Class CompraEForm
         'OkCompraEButton
         '
         Me.OkCompraEButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.OkCompraEButton.FlatAppearance.BorderSize = 0
         Me.OkCompraEButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.OkCompraEButton.Location = New System.Drawing.Point(121, 106)
         Me.OkCompraEButton.Name = "OkCompraEButton"
@@ -51,11 +52,15 @@ Partial Class CompraEForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(337, 157)
+        Me.ControlBox = False
         Me.Controls.Add(Me.CompraELabel)
         Me.Controls.Add(Me.OkCompraEButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CompraEForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Compra Exitosa"
         Me.ResumeLayout(False)
         Me.PerformLayout()
