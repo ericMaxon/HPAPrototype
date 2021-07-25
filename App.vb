@@ -1,8 +1,6 @@
 ﻿Public Class App
 
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'DB_ProyectoFInal2021DataSet.Medicamentos' Puede moverla o quitarla según sea necesario.
-        Me.MedicamentosTableAdapter.Fill(Me.DB_ProyectoFInal2021DataSet.Medicamentos)
         btnHome_Click(Me, EventArgs.Empty)
     End Sub
 #Region "Funciones auxiliares del app"
