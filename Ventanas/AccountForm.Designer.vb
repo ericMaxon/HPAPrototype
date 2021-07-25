@@ -30,6 +30,9 @@ Partial Class AccountForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblHeaderTitle = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,9 +47,9 @@ Partial Class AccountForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(31, 51)
+        Me.Label2.Location = New System.Drawing.Point(31, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(107, 16)
         Me.Label2.TabIndex = 2
@@ -55,7 +58,8 @@ Partial Class AccountForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(154, 88)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Location = New System.Drawing.Point(154, 115)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 3
@@ -64,7 +68,7 @@ Partial Class AccountForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(31, 166)
         Me.Label4.Name = "Label4"
@@ -75,7 +79,7 @@ Partial Class AccountForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(37, 198)
         Me.Label5.Name = "Label5"
@@ -87,7 +91,7 @@ Partial Class AccountForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(31, 328)
         Me.Label6.Name = "Label6"
@@ -98,7 +102,7 @@ Partial Class AccountForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.White
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(137, 360)
         Me.Label7.Name = "Label7"
@@ -106,13 +110,37 @@ Partial Class AccountForm
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "- Alimentación" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Ejercicio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Gastrectomía Bascular" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Bypass Gástrico"
         '
+        'lblHeaderTitle
+        '
+        Me.lblHeaderTitle.BackColor = System.Drawing.Color.LightGray
+        Me.lblHeaderTitle.Font = New System.Drawing.Font("Mongolian Baiti", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeaderTitle.Location = New System.Drawing.Point(0, -3)
+        Me.lblHeaderTitle.Name = "lblHeaderTitle"
+        Me.lblHeaderTitle.Size = New System.Drawing.Size(414, 43)
+        Me.lblHeaderTitle.TabIndex = 8
+        Me.lblHeaderTitle.Text = "Cuenta"
+        Me.lblHeaderTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.LightGray
+        Me.PictureBox1.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.akar_icons_arrow_left
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 35)
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
         'AccountForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(398, 461)
+        Me.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.MicrosoftTeams_image__1_
+        Me.ClientSize = New System.Drawing.Size(414, 563)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.lblHeaderTitle)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -120,10 +148,12 @@ Partial Class AccountForm
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.MaximumSize = New System.Drawing.Size(414, 500)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximumSize = New System.Drawing.Size(414, 563)
         Me.MinimumSize = New System.Drawing.Size(414, 500)
         Me.Name = "AccountForm"
         Me.Text = "v"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -136,4 +166,6 @@ Partial Class AccountForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents lblHeaderTitle As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -28,10 +28,7 @@ Partial Class App
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.pnlTopUI = New System.Windows.Forms.Panel()
         Me.pnlTabs = New System.Windows.Forms.Panel()
-        Me.medsLbl = New System.Windows.Forms.Label()
-        Me.homeLbl = New System.Windows.Forms.Label()
         Me.pnlBtnCitas = New System.Windows.Forms.Panel()
-        Me.citasLbl = New System.Windows.Forms.Label()
         Me.btnCitas = New System.Windows.Forms.Button()
         Me.pnlBtnMed = New System.Windows.Forms.Panel()
         Me.btnMedicamentos = New System.Windows.Forms.Button()
@@ -77,7 +74,9 @@ Partial Class App
         '
         'pnlMain
         '
-        Me.pnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(216, Byte), Integer))
+        Me.pnlMain.BackColor = System.Drawing.Color.White
+        Me.pnlMain.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.MicrosoftTeams_image__1_
+        Me.pnlMain.Controls.Add(Me.pnlHeader)
         Me.pnlMain.Controls.Add(Me.pnlTopUI)
         Me.pnlMain.Controls.Add(Me.pnlTabs)
         Me.pnlMain.Controls.Add(Me.pnlBttmUI)
@@ -86,6 +85,42 @@ Partial Class App
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(414, 729)
         Me.pnlMain.TabIndex = 2
+        '
+        'pnlHeader
+        '
+        Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlHeader.Controls.Add(Me.btnExit)
+        Me.pnlHeader.Controls.Add(Me.lblHeaderTitle)
+        Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlHeader.Location = New System.Drawing.Point(0, 28)
+        Me.pnlHeader.Name = "pnlHeader"
+        Me.pnlHeader.Size = New System.Drawing.Size(414, 58)
+        Me.pnlHeader.TabIndex = 1
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.btnExit.BackgroundImage = CType(resources.GetObject("btnExit.BackgroundImage"), System.Drawing.Image)
+        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Location = New System.Drawing.Point(365, 12)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(37, 33)
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'lblHeaderTitle
+        '
+        Me.lblHeaderTitle.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.lblHeaderTitle.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblHeaderTitle.Font = New System.Drawing.Font("Mongolian Baiti", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeaderTitle.Location = New System.Drawing.Point(0, 0)
+        Me.lblHeaderTitle.Name = "lblHeaderTitle"
+        Me.lblHeaderTitle.Size = New System.Drawing.Size(414, 58)
+        Me.lblHeaderTitle.TabIndex = 1
+        Me.lblHeaderTitle.Text = "EMPRESEA SYJE"
+        Me.lblHeaderTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTopUI
         '
@@ -98,9 +133,7 @@ Partial Class App
         '
         'pnlTabs
         '
-        Me.pnlTabs.BackColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlTabs.Controls.Add(Me.medsLbl)
-        Me.pnlTabs.Controls.Add(Me.homeLbl)
+        Me.pnlTabs.BackColor = System.Drawing.Color.WhiteSmoke
         Me.pnlTabs.Controls.Add(Me.pnlBtnCitas)
         Me.pnlTabs.Controls.Add(Me.pnlBtnMed)
         Me.pnlTabs.Controls.Add(Me.pnlBtnAccount)
@@ -111,41 +144,13 @@ Partial Class App
         Me.pnlTabs.Size = New System.Drawing.Size(414, 86)
         Me.pnlTabs.TabIndex = 1
         '
-        'medsLbl
-        '
-        Me.medsLbl.AutoSize = True
-        Me.medsLbl.Location = New System.Drawing.Point(217, 66)
-        Me.medsLbl.Name = "medsLbl"
-        Me.medsLbl.Size = New System.Drawing.Size(76, 13)
-        Me.medsLbl.TabIndex = 7
-        Me.medsLbl.Text = "Medicamentos"
-        '
-        'homeLbl
-        '
-        Me.homeLbl.AutoSize = True
-        Me.homeLbl.Location = New System.Drawing.Point(23, 66)
-        Me.homeLbl.Name = "homeLbl"
-        Me.homeLbl.Size = New System.Drawing.Size(77, 13)
-        Me.homeLbl.TabIndex = 5
-        Me.homeLbl.Text = "Menú Principal"
-        '
         'pnlBtnCitas
         '
-        Me.pnlBtnCitas.Controls.Add(Me.citasLbl)
         Me.pnlBtnCitas.Controls.Add(Me.btnCitas)
         Me.pnlBtnCitas.Location = New System.Drawing.Point(116, 6)
         Me.pnlBtnCitas.Name = "pnlBtnCitas"
         Me.pnlBtnCitas.Size = New System.Drawing.Size(73, 73)
         Me.pnlBtnCitas.TabIndex = 2
-        '
-        'citasLbl
-        '
-        Me.citasLbl.AutoSize = True
-        Me.citasLbl.Location = New System.Drawing.Point(20, 60)
-        Me.citasLbl.Name = "citasLbl"
-        Me.citasLbl.Size = New System.Drawing.Size(30, 13)
-        Me.citasLbl.TabIndex = 6
-        Me.citasLbl.Text = "Citas"
         '
         'btnCitas
         '
@@ -339,9 +344,7 @@ Partial Class App
         Me.pnlContainer.ResumeLayout(False)
         Me.pnlMain.ResumeLayout(False)
         Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.pnlBtnCitas.ResumeLayout(False)
-        Me.pnlBtnCitas.PerformLayout()
         Me.pnlBtnMed.ResumeLayout(False)
         Me.pnlBtnAccount.ResumeLayout(False)
         Me.pnlBtnAccount.PerformLayout()
@@ -375,11 +378,9 @@ Partial Class App
     Friend WithEvents btnCelHome As Button
     Friend WithEvents pnlCelGoBack As Panel
     Friend WithEvents btnGoBack As Button
-    Friend WithEvents homeLbl As Label
-    Friend WithEvents cuentaLbl As Label
-    Friend WithEvents medsLbl As Label
-    Friend WithEvents citasLbl As Label
-    Friend WithEvents DB_ProyectoFInal2021DataSet As DB_ProyectoFInal2021DataSet
-    Friend WithEvents MedicamentosBindingSource As BindingSource
-    Friend WithEvents MedicamentosTableAdapter As DB_ProyectoFInal2021DataSetTableAdapters.MedicamentosTableAdapter
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnExit As Button
 End Class
