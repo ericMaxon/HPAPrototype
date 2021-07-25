@@ -81,19 +81,6 @@ Partial Class App
         Me.pnlMain.Size = New System.Drawing.Size(414, 729)
         Me.pnlMain.TabIndex = 2
         '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.btnExit.BackgroundImage = CType(resources.GetObject("btnExit.BackgroundImage"), System.Drawing.Image)
-        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnExit.FlatAppearance.BorderSize = 0
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Location = New System.Drawing.Point(365, 12)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(37, 33)
-        Me.btnExit.TabIndex = 2
-        Me.btnExit.UseVisualStyleBackColor = False
-        '
         'pnlTopUI
         '
         Me.pnlTopUI.BackColor = System.Drawing.SystemColors.AppWorkspace
