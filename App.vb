@@ -1,14 +1,9 @@
 ﻿Public Class App
-    Public conn As New Controlador()
 
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'DB_ProyectoFInal2021DataSet.Medicamentos' Puede moverla o quitarla según sea necesario.
+        Me.MedicamentosTableAdapter.Fill(Me.DB_ProyectoFInal2021DataSet.Medicamentos)
         btnHome_Click(Me, EventArgs.Empty)
-        ' Dim respuesta = conn.obtenerDatos("Select * from Usuario where TipoDeUsuario = 'DOC'")
-        'If respuesta.HasRows Then
-        ' While respuesta.Read()
-        'MsgBox($"{respuesta("Cedula")} {respuesta("Nombre")} {respuesta("Telefono")}", vbOK, "A ver")
-        'End While
-        'End If
     End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
@@ -55,5 +50,14 @@
     Private Sub btnCelHome_Click(sender As Object, e As EventArgs) Handles btnCelHome.Click
         Application.Exit()
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs)
+        FinalizarForm.Show()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
 #End Region
 End Class

@@ -89,6 +89,7 @@
       <DependentUpon>DB_ProyectoFInal2021DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Cita.vb" />
+    <Compile Include="Entidades\Doctor.vb" />
     <Compile Include="Entidades\Paciente.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -155,16 +156,16 @@
     <Compile Include="Ventanas\Mensajes\FinalizarForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Mensajes\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Ventanas\Mensajes\PesoForm.Designer.vb">
+      <DependentUpon>PesoForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Mensajes\Form1.vb">
+    <Compile Include="Ventanas\Mensajes\PesoForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Mensajes\InventarioBForm.Designer.vb">
-      <DependentUpon>InventarioBForm.vb</DependentUpon>
+    <Compile Include="Ventanas\Mensajes\ErrorForm.Designer.vb">
+      <DependentUpon>ErrorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Mensajes\InventarioBForm.vb">
+    <Compile Include="Ventanas\Mensajes\ErrorForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Mensajes\SolicitudForm.Designer.vb">
@@ -215,11 +216,11 @@
     <EmbeddedResource Include="Ventanas\Mensajes\FinalizarForm.resx">
       <DependentUpon>FinalizarForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Mensajes\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Mensajes\PesoForm.resx">
+      <DependentUpon>PesoForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Mensajes\InventarioBForm.resx">
-      <DependentUpon>InventarioBForm.vb</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Mensajes\ErrorForm.resx">
+      <DependentUpon>ErrorForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Mensajes\SolicitudForm.resx">
       <DependentUpon>SolicitudForm.vb</DependentUpon>
