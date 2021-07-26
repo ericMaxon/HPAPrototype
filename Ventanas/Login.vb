@@ -1,8 +1,9 @@
 ﻿Public Class Login
+    Dim Pesoform = New PesoForm("")
 
     Private Sub btnLogIngresar_Click(sender As Object, e As EventArgs) Handles btnLogIngresar.Click
         Me.Hide()
-        Ingresar.Show()
+        Pesoform.Show()
     End Sub
 
     Private Sub btnLogRegistrarse_Click(sender As Object, e As EventArgs) Handles btnLogRegistrarse.Click
