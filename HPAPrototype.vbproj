@@ -92,6 +92,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -115,6 +116,18 @@
     <Compile Include="Ventanas\HomeForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventanas\Ingresar.Designer.vb">
+      <DependentUpon>Ingresar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Ingresar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\MedsForm.Designer.vb">
       <DependentUpon>MedsForm.vb</DependentUpon>
     </Compile>
@@ -125,6 +138,12 @@
       <DependentUpon>QuotesForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\QuotesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Registrar.Designer.vb">
+      <DependentUpon>Registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Registrar.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -145,11 +164,20 @@
     <EmbeddedResource Include="Ventanas\HomeForm.resx">
       <DependentUpon>HomeForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Ingresar.resx">
+      <DependentUpon>Ingresar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\MedsForm.resx">
       <DependentUpon>MedsForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\QuotesForm.resx">
       <DependentUpon>QuotesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Registrar.resx">
+      <DependentUpon>Registrar.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
