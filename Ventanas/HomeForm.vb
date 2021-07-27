@@ -1,5 +1,6 @@
 ﻿Public Class HomeForm
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
+    Dim user = App.appUsuario
+    Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

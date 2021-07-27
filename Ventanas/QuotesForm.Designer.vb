@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class QuotesForm
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,30 @@ Partial Class QuotesForm
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnSolicitarCita = New System.Windows.Forms.Button()
         Me.lblHeaderTitle = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.dgvCitas = New System.Windows.Forms.DataGridView()
+        Me.tbxClmCodCita = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbxClmFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbxClmNmDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tbxColmHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CitasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DB_ProyectoFInal2021DataSet = New HPAPrototype.DB_ProyectoFInal2021DataSet()
+        Me.CitasTableAdapter = New HPAPrototype.DB_ProyectoFInal2021DataSetTableAdapters.CitasTableAdapter()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCitas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CitasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DB_ProyectoFInal2021DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnSolicitarCita
         '
         Me.btnSolicitarCita.BackColor = System.Drawing.Color.DarkGray
-        Me.btnSolicitarCita.Location = New System.Drawing.Point(115, 101)
+        Me.btnSolicitarCita.Location = New System.Drawing.Point(127, 56)
         Me.btnSolicitarCita.Name = "btnSolicitarCita"
         Me.btnSolicitarCita.Size = New System.Drawing.Size(143, 28)
         Me.btnSolicitarCita.TabIndex = 2
@@ -59,6 +71,57 @@ Partial Class QuotesForm
         Me.PictureBox5.TabIndex = 17
         Me.PictureBox5.TabStop = False
         '
+        'dgvCitas
+        '
+        Me.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tbxClmCodCita, Me.tbxClmFecha, Me.tbxClmNmDoc, Me.tbxColmHora})
+        Me.dgvCitas.Location = New System.Drawing.Point(4, 147)
+        Me.dgvCitas.Name = "dgvCitas"
+        Me.dgvCitas.Size = New System.Drawing.Size(396, 46)
+        Me.dgvCitas.TabIndex = 18
+        '
+        'tbxClmCodCita
+        '
+        Me.tbxClmCodCita.Frozen = True
+        Me.tbxClmCodCita.HeaderText = "CodCita"
+        Me.tbxClmCodCita.Name = "tbxClmCodCita"
+        Me.tbxClmCodCita.ReadOnly = True
+        '
+        'tbxClmFecha
+        '
+        Me.tbxClmFecha.Frozen = True
+        Me.tbxClmFecha.HeaderText = "Fecha"
+        Me.tbxClmFecha.Name = "tbxClmFecha"
+        Me.tbxClmFecha.ReadOnly = True
+        '
+        'tbxClmNmDoc
+        '
+        Me.tbxClmNmDoc.Frozen = True
+        Me.tbxClmNmDoc.HeaderText = "Doctor"
+        Me.tbxClmNmDoc.Name = "tbxClmNmDoc"
+        Me.tbxClmNmDoc.ReadOnly = True
+        '
+        'tbxColmHora
+        '
+        Me.tbxColmHora.Frozen = True
+        Me.tbxColmHora.HeaderText = "Hora"
+        Me.tbxColmHora.Name = "tbxColmHora"
+        Me.tbxColmHora.ReadOnly = True
+        '
+        'CitasBindingSource
+        '
+        Me.CitasBindingSource.DataMember = "Citas"
+        Me.CitasBindingSource.DataSource = Me.DB_ProyectoFInal2021DataSet
+        '
+        'DB_ProyectoFInal2021DataSet
+        '
+        Me.DB_ProyectoFInal2021DataSet.DataSetName = "DB_ProyectoFInal2021DataSet"
+        Me.DB_ProyectoFInal2021DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CitasTableAdapter
+        '
+        Me.CitasTableAdapter.ClearBeforeFill = True
+        '
         'QuotesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -67,6 +130,7 @@ Partial Class QuotesForm
         Me.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.MicrosoftTeams_image__1_
         Me.ClientSize = New System.Drawing.Size(398, 461)
         Me.ControlBox = False
+        Me.Controls.Add(Me.dgvCitas)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.lblHeaderTitle)
         Me.Controls.Add(Me.btnSolicitarCita)
@@ -74,10 +138,21 @@ Partial Class QuotesForm
         Me.Name = "QuotesForm"
         Me.Text = "QuotesForm"
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCitas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CitasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DB_ProyectoFInal2021DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents btnSolicitarCita As Button
     Friend WithEvents lblHeaderTitle As Label
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents dgvCitas As DataGridView
+    Friend WithEvents tbxClmCodCita As DataGridViewTextBoxColumn
+    Friend WithEvents tbxClmFecha As DataGridViewTextBoxColumn
+    Friend WithEvents tbxClmNmDoc As DataGridViewTextBoxColumn
+    Friend WithEvents tbxColmHora As DataGridViewTextBoxColumn
+    Friend WithEvents DB_ProyectoFInal2021DataSet As DB_ProyectoFInal2021DataSet
+    Friend WithEvents CitasBindingSource As BindingSource
+    Friend WithEvents CitasTableAdapter As DB_ProyectoFInal2021DataSetTableAdapters.CitasTableAdapter
 End Class
