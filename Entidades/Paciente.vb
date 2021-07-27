@@ -8,16 +8,19 @@ Public Class Paciente
     Private Altura As Double
     Private Peso As Double
     Private Citas As List(Of Cita)
+    Private Genero As String
     ' Cuando se registra el usuario
-    Public Sub New(Cedula As String, Nombre As String, Telefono As String, Correo As String, Edad As Integer)
+    Public Sub New(Cedula As String, Nombre As String, Telefono As String, Correo As String, Edad As Integer, Altura As Double, Genero As String)
         Me.Cedula = Cedula
         Me.Nombre = Nombre
         Me.Telefono = Telefono
         Me.Correo = Correo
         Me.Edad = Edad
+        Me.Altura = Altura
+        Me.Genero = Genero
     End Sub
     ' Cuando el usuario tiene informacion en la base de datos
-    Public Sub New(Cedula As String, Nombre As String, Telefono As String, Correo As String, Edad As Integer, Peso As Double, Altura As Double)
+    Public Sub New(Cedula As String, Nombre As String, Telefono As String, Correo As String, Edad As Integer, Peso As Double, Altura As Double, Genero As String)
         Me.Cedula = Cedula
         Me.Nombre = Nombre
         Me.Telefono = Telefono
@@ -25,6 +28,7 @@ Public Class Paciente
         Me.Edad = Edad
         Me.Peso = Peso
         Me.Altura = Altura
+        Me.Genero = Genero
     End Sub
 
     Public Sub AñadeCita(_cita As Cita)
@@ -101,6 +105,15 @@ Public Class Paciente
         End Get
         Set(value As List(Of Cita))
             Citas = value
+        End Set
+    End Property
+
+    Public Property GeneroProp As String
+        Get
+            Return Genero
+        End Get
+        Set(value As String)
+            Genero = value
         End Set
     End Property
 End Class
