@@ -61,7 +61,7 @@ Partial Class Loading
         Me.ControlBox = False
         Me.Controls.Add(Me.pnlLoading)
         Me.Name = "Loading"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Loading"
         Me.pnlLoading.ResumeLayout(False)
         Me.pnlLoading.PerformLayout()

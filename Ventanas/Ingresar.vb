@@ -29,4 +29,26 @@
             txtLogTelef.ForeColor = Color.Gray
         End If
     End Sub
+
+    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+        btnIngresar.Enabled = False
+        txtLogCedula.ReadOnly = True
+        txtLogTelef.ReadOnly = True
+
+        Dim usuario = Controlador.ObtenerUsuario(cedula:=txtLogCedula.Text, telefono:=txtLogTelef.Text)
+        If Not IsNothing(usuario) Then
+            Dim MainApp As New App(usuario)
+            Me.Hide()
+            MainApp.Show()
+        Else
+            btnIngresar.Enabled = True
+            txtLogCedula.ReadOnly = False
+            txtLogTelef.ReadOnly = False
+        End If
+
+    End Sub
+
+    Private Sub Ingresar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

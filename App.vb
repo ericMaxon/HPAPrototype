@@ -1,7 +1,21 @@
 ﻿Public Class App
+    Public Shared appUsuario As Paciente
+    Public Shared doctores As New List(Of Doctor)
+    Public Sub New(_usuario As Paciente)
 
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        appUsuario = _usuario
+    End Sub
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim ingresoDiario As New PesoForm(appUsuario.CedulaProp)
+        appUsuario.CitasProp = Controlador.ObtenerCitas(appUsuario.CedulaProp)
+        doctores = Controlador.ObtenerDoctores
         btnHome_Click(Me, EventArgs.Empty)
+        ingresoDiario.Show()
+        ingresoDiario.BringToFront()
     End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
@@ -40,6 +54,7 @@
     End Sub
 
     Private Sub btnAccount_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
+
         IrA(Of AccountForm)()
     End Sub
 #End Region
@@ -58,4 +73,5 @@
     End Sub
 
 #End Region
+
 End Class
