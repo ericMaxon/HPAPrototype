@@ -34,10 +34,11 @@ Partial Class AccountForm
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnMeds = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -53,42 +54,42 @@ Partial Class AccountForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(24, 32)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 16)
+        Me.Label2.Size = New System.Drawing.Size(159, 16)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Condición Física"
+        Me.Label2.Text = "Condición Física(IMC)"
         '
         'imcLbl
         '
-        Me.imcLbl.AutoSize = True
         Me.imcLbl.BackColor = System.Drawing.Color.Transparent
-        Me.imcLbl.Location = New System.Drawing.Point(147, 60)
+        Me.imcLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.imcLbl.Location = New System.Drawing.Point(57, 28)
         Me.imcLbl.Name = "imcLbl"
-        Me.imcLbl.Size = New System.Drawing.Size(39, 13)
+        Me.imcLbl.Size = New System.Drawing.Size(277, 35)
         Me.imcLbl.TabIndex = 3
-        Me.imcLbl.Text = "Label3"
+        Me.imcLbl.Text = """Usted tiene Sobre peso, ,con un indice de {imc}"
+        Me.imcLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(-3, 8)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 11)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 16)
+        Me.Label4.Size = New System.Drawing.Size(72, 16)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Síntomas"
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 40)
+        Me.Label5.Location = New System.Drawing.Point(3, 27)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(339, 105)
+        Me.Label5.Size = New System.Drawing.Size(348, 118)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = resources.GetString("Label5.Text")
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -97,10 +98,10 @@ Partial Class AccountForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(31, 328)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(34, 5)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 16)
+        Me.Label6.Size = New System.Drawing.Size(99, 16)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Tratamientos"
         '
@@ -109,7 +110,7 @@ Partial Class AccountForm
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(137, 360)
+        Me.Label7.Location = New System.Drawing.Point(140, 37)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(138, 60)
         Me.Label7.TabIndex = 7
@@ -149,20 +150,19 @@ Partial Class AccountForm
         '
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(25, 180)
+        Me.Panel2.Location = New System.Drawing.Point(25, 197)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(351, 145)
         Me.Panel2.TabIndex = 12
         '
-        'btnMeds
+        'Panel3
         '
-        Me.btnMeds.BackColor = System.Drawing.Color.DarkGray
-        Me.btnMeds.Location = New System.Drawing.Point(132, 472)
-        Me.btnMeds.Name = "btnMeds"
-        Me.btnMeds.Size = New System.Drawing.Size(143, 28)
-        Me.btnMeds.TabIndex = 14
-        Me.btnMeds.Text = "Mis Medicamentos"
-        Me.btnMeds.UseVisualStyleBackColor = False
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.Label6)
+        Me.Panel3.Location = New System.Drawing.Point(25, 389)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(351, 109)
+        Me.Panel3.TabIndex = 15
         '
         'AccountForm
         '
@@ -172,13 +172,11 @@ Partial Class AccountForm
         Me.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.MicrosoftTeams_image__1_
         Me.ClientSize = New System.Drawing.Size(414, 563)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnMeds)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblHeaderTitle)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximumSize = New System.Drawing.Size(414, 563)
@@ -190,6 +188,8 @@ Partial Class AccountForm
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -206,5 +206,5 @@ Partial Class AccountForm
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents btnMeds As Button
+    Friend WithEvents Panel3 As Panel
 End Class

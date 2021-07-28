@@ -1,4 +1,13 @@
 ﻿Public Class Registrar
+    Private nav As Navegar
+    Public Sub New(_nav As Navegar)
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        nav = _nav
+    End Sub
     Private Sub btnRegistrarse_Click(sender As Object, e As EventArgs) Handles btnRegistrarse.Click
         tbxCedula.ReadOnly = True
         tbxNombre.ReadOnly = True
@@ -27,7 +36,19 @@
                 MainApp.Show()
                 exito.Show()
                 exito.BringToFront()
+            Else
+                tbxCedula.ReadOnly = False
+                tbxNombre.ReadOnly = False
+                tbxApellido.ReadOnly = False
+                tbxTelefono.ReadOnly = False
+                tbxEdad.ReadOnly = False
+                btnRegistrarse.Enabled = False
+                tbxAltura.ReadOnly = False
             End If
         End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        nav.Regresar(Me)
     End Sub
 End Class

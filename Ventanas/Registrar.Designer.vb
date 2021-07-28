@@ -41,6 +41,8 @@ Partial Class Registrar
         Me.tbxAltura = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.tbxCorreo = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -211,6 +213,16 @@ Partial Class Registrar
         Me.tbxCorreo.Size = New System.Drawing.Size(145, 20)
         Me.tbxCorreo.TabIndex = 9
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.akar_icons_arrow_left
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 35)
+        Me.PictureBox1.TabIndex = 20
+        Me.PictureBox1.TabStop = False
+        '
         'Registrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -218,6 +230,8 @@ Partial Class Registrar
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(398, 461)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.tbxCorreo)
         Me.Controls.Add(Me.Label8)
@@ -240,6 +254,7 @@ Partial Class Registrar
         Me.Name = "Registrar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registrar"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -263,4 +278,5 @@ Partial Class Registrar
     Friend WithEvents tbxAltura As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents tbxCorreo As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
