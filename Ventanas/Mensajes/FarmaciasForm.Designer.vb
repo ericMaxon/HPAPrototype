@@ -24,11 +24,12 @@ Partial Class FarmaciasForm
     Private Sub InitializeComponent()
         Me.SalirButton = New System.Windows.Forms.Button()
         Me.FarmaciasLabel = New System.Windows.Forms.Label()
-        Me.CSSLabel1 = New System.Windows.Forms.Label()
-        Me.CSSLabel = New System.Windows.Forms.Label()
-        Me.ArrochaLabel = New System.Windows.Forms.Label()
-        Me.JavilloLabel = New System.Windows.Forms.Label()
-        Me.SazLabel = New System.Windows.Forms.Label()
+        Me.javilloBtn = New System.Windows.Forms.Button()
+        Me.arrochaBtn = New System.Windows.Forms.Button()
+        Me.css17Btn = New System.Windows.Forms.Button()
+        Me.cssColonBtn = New System.Windows.Forms.Button()
+        Me.sazBtn = New System.Windows.Forms.Button()
+        Me.medLbl = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'SalirButton
@@ -46,71 +47,78 @@ Partial Class FarmaciasForm
         '
         Me.FarmaciasLabel.AutoSize = True
         Me.FarmaciasLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FarmaciasLabel.Location = New System.Drawing.Point(176, 22)
+        Me.FarmaciasLabel.Location = New System.Drawing.Point(77, 9)
         Me.FarmaciasLabel.Name = "FarmaciasLabel"
-        Me.FarmaciasLabel.Size = New System.Drawing.Size(121, 25)
+        Me.FarmaciasLabel.Size = New System.Drawing.Size(346, 25)
         Me.FarmaciasLabel.TabIndex = 1
-        Me.FarmaciasLabel.Text = "Farmacias"
+        Me.FarmaciasLabel.Text = "Seleccione la farmacia de retiro"
         '
-        'CSSLabel1
+        'javilloBtn
         '
-        Me.CSSLabel1.AutoSize = True
-        Me.CSSLabel1.BackColor = System.Drawing.Color.White
-        Me.CSSLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CSSLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CSSLabel1.Location = New System.Drawing.Point(169, 182)
-        Me.CSSLabel1.Name = "CSSLabel1"
-        Me.CSSLabel1.Size = New System.Drawing.Size(137, 18)
-        Me.CSSLabel1.TabIndex = 2
-        Me.CSSLabel1.Text = "CSS(Colon, Panama)"
+        Me.javilloBtn.AutoSize = True
+        Me.javilloBtn.Location = New System.Drawing.Point(157, 79)
+        Me.javilloBtn.Name = "javilloBtn"
+        Me.javilloBtn.Size = New System.Drawing.Size(171, 23)
+        Me.javilloBtn.TabIndex = 7
+        Me.javilloBtn.Tag = "5000"
+        Me.javilloBtn.Text = "El Javillo (Calle 50, Panama)"
+        Me.javilloBtn.UseVisualStyleBackColor = True
         '
-        'CSSLabel
+        'arrochaBtn
         '
-        Me.CSSLabel.AutoSize = True
-        Me.CSSLabel.BackColor = System.Drawing.Color.White
-        Me.CSSLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CSSLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CSSLabel.Location = New System.Drawing.Point(158, 143)
-        Me.CSSLabel.Name = "CSSLabel"
-        Me.CSSLabel.Size = New System.Drawing.Size(153, 18)
-        Me.CSSLabel.TabIndex = 3
-        Me.CSSLabel.Text = "CSS (Calle 17, Panama)"
+        Me.arrochaBtn.AutoSize = True
+        Me.arrochaBtn.Location = New System.Drawing.Point(157, 115)
+        Me.arrochaBtn.Margin = New System.Windows.Forms.Padding(10)
+        Me.arrochaBtn.Name = "arrochaBtn"
+        Me.arrochaBtn.Size = New System.Drawing.Size(171, 23)
+        Me.arrochaBtn.TabIndex = 8
+        Me.arrochaBtn.Tag = "5002"
+        Me.arrochaBtn.Text = "Farmacias Arrocha (Albrook)"
+        Me.arrochaBtn.UseVisualStyleBackColor = True
         '
-        'ArrochaLabel
+        'css17Btn
         '
-        Me.ArrochaLabel.AutoSize = True
-        Me.ArrochaLabel.BackColor = System.Drawing.Color.White
-        Me.ArrochaLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ArrochaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ArrochaLabel.Location = New System.Drawing.Point(144, 106)
-        Me.ArrochaLabel.Name = "ArrochaLabel"
-        Me.ArrochaLabel.Size = New System.Drawing.Size(182, 18)
-        Me.ArrochaLabel.TabIndex = 4
-        Me.ArrochaLabel.Text = "Farmacias Arrocha (Albrook)"
+        Me.css17Btn.AutoSize = True
+        Me.css17Btn.Location = New System.Drawing.Point(157, 151)
+        Me.css17Btn.Name = "css17Btn"
+        Me.css17Btn.Size = New System.Drawing.Size(171, 23)
+        Me.css17Btn.TabIndex = 9
+        Me.css17Btn.Tag = "5004"
+        Me.css17Btn.Text = "CSS (Calle 17, Panama)"
+        Me.css17Btn.UseVisualStyleBackColor = True
         '
-        'JavilloLabel
+        'cssColonBtn
         '
-        Me.JavilloLabel.AutoSize = True
-        Me.JavilloLabel.BackColor = System.Drawing.Color.White
-        Me.JavilloLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.JavilloLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.JavilloLabel.Location = New System.Drawing.Point(146, 70)
-        Me.JavilloLabel.Name = "JavilloLabel"
-        Me.JavilloLabel.Size = New System.Drawing.Size(180, 18)
-        Me.JavilloLabel.TabIndex = 5
-        Me.JavilloLabel.Text = "El Javillo (Calle 50, Panama)"
+        Me.cssColonBtn.AutoSize = True
+        Me.cssColonBtn.Location = New System.Drawing.Point(157, 187)
+        Me.cssColonBtn.Margin = New System.Windows.Forms.Padding(10)
+        Me.cssColonBtn.Name = "cssColonBtn"
+        Me.cssColonBtn.Size = New System.Drawing.Size(171, 23)
+        Me.cssColonBtn.TabIndex = 10
+        Me.cssColonBtn.Tag = "5006"
+        Me.cssColonBtn.Text = "CSS (Colon, Panama)"
+        Me.cssColonBtn.UseVisualStyleBackColor = True
         '
-        'SazLabel
+        'sazBtn
         '
-        Me.SazLabel.AutoSize = True
-        Me.SazLabel.BackColor = System.Drawing.Color.White
-        Me.SazLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SazLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SazLabel.Location = New System.Drawing.Point(144, 222)
-        Me.SazLabel.Name = "SazLabel"
-        Me.SazLabel.Size = New System.Drawing.Size(196, 18)
-        Me.SazLabel.TabIndex = 6
-        Me.SazLabel.Text = "Farmacia Saz (Colon, Panama)"
+        Me.sazBtn.AutoSize = True
+        Me.sazBtn.Location = New System.Drawing.Point(157, 223)
+        Me.sazBtn.Name = "sazBtn"
+        Me.sazBtn.Size = New System.Drawing.Size(171, 23)
+        Me.sazBtn.TabIndex = 11
+        Me.sazBtn.Tag = "5008"
+        Me.sazBtn.Text = "Farmacia Saz (Colon, Panama)"
+        Me.sazBtn.UseVisualStyleBackColor = True
+        '
+        'medLbl
+        '
+        Me.medLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.medLbl.Location = New System.Drawing.Point(77, 47)
+        Me.medLbl.Name = "medLbl"
+        Me.medLbl.Size = New System.Drawing.Size(346, 25)
+        Me.medLbl.TabIndex = 12
+        Me.medLbl.Text = "Medicamento"
+        Me.medLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FarmaciasForm
         '
@@ -118,14 +126,18 @@ Partial Class FarmaciasForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(461, 304)
-        Me.Controls.Add(Me.SazLabel)
-        Me.Controls.Add(Me.JavilloLabel)
-        Me.Controls.Add(Me.ArrochaLabel)
-        Me.Controls.Add(Me.CSSLabel)
-        Me.Controls.Add(Me.CSSLabel1)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.medLbl)
+        Me.Controls.Add(Me.sazBtn)
+        Me.Controls.Add(Me.cssColonBtn)
+        Me.Controls.Add(Me.css17Btn)
+        Me.Controls.Add(Me.arrochaBtn)
+        Me.Controls.Add(Me.javilloBtn)
         Me.Controls.Add(Me.FarmaciasLabel)
         Me.Controls.Add(Me.SalirButton)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FarmaciasForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Farmacias"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -134,9 +146,10 @@ Partial Class FarmaciasForm
 
     Friend WithEvents SalirButton As Button
     Friend WithEvents FarmaciasLabel As Label
-    Friend WithEvents CSSLabel1 As Label
-    Friend WithEvents CSSLabel As Label
-    Friend WithEvents ArrochaLabel As Label
-    Friend WithEvents JavilloLabel As Label
-    Friend WithEvents SazLabel As Label
+    Friend WithEvents javilloBtn As Button
+    Friend WithEvents arrochaBtn As Button
+    Friend WithEvents css17Btn As Button
+    Friend WithEvents cssColonBtn As Button
+    Friend WithEvents sazBtn As Button
+    Friend WithEvents medLbl As Label
 End Class

@@ -3,18 +3,23 @@
 
     Private Sub SolicitarButton_Click(sender As Object, e As EventArgs) Handles SolicitarButton.Click
         Dim index = cmbxDoctores.SelectedIndex
-        If index > 0 Then
+        SolicitarButton.Enabled = False
+        If index >= 0 Then
             Dim docElegido = App.doctores.Find(Function(doctor)
                                                    Return doctor.NombreProp.Equals(cmbxDoctores.Items(index).ToString)
                                                End Function)
 
-
-            Controlador.AgregarCita(
-                cedPac:=App.appUsuario.CedulaProp, 
-                cedDoc:=docElegido.CedulaProp, 
-                fecha:=dtpFecha.Value.Date, 
-                hora:=dtpHora.Value.TimeOfDay, 
+            Dim respuesta = Controlador.AgregarCita(
+                cedPac:=App.appUsuario.CedulaProp,
+                cedDoc:=docElegido.CedulaProp,
+                fecha:=dtpFecha.Value.Date,
+                hora:=dtpHora.Value.TimeOfDay,
                 motivo:=DescBox.Text)
+            If respuesta > 0 Then
+                Me.Dispose()
+            Else
+                SolicitarButton.Enabled = True
+            End If
         End If
 
     End Sub
@@ -36,4 +41,7 @@
 
     End Sub
 
+    Private Sub cerrarBtn_Click(sender As Object, e As EventArgs) Handles cerrarBtn.Click
+        Me.Dispose()
+    End Sub
 End Class

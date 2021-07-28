@@ -44,13 +44,14 @@ Partial Class SolicitudForm
         Me.dtpHora = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PesoBox = New System.Windows.Forms.TextBox()
+        Me.cerrarBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'SolicitarButton
         '
         Me.SolicitarButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.SolicitarButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.SolicitarButton.Location = New System.Drawing.Point(241, 285)
+        Me.SolicitarButton.Location = New System.Drawing.Point(275, 285)
         Me.SolicitarButton.Name = "SolicitarButton"
         Me.SolicitarButton.Size = New System.Drawing.Size(75, 23)
         Me.SolicitarButton.TabIndex = 12
@@ -275,6 +276,17 @@ Partial Class SolicitudForm
         Me.PesoBox.Text = "Ex. su peso en kg"
         Me.PesoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'cerrarBtn
+        '
+        Me.cerrarBtn.BackColor = System.Drawing.Color.IndianRed
+        Me.cerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cerrarBtn.Location = New System.Drawing.Point(154, 285)
+        Me.cerrarBtn.Name = "cerrarBtn"
+        Me.cerrarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.cerrarBtn.TabIndex = 23
+        Me.cerrarBtn.Text = "Cerrar"
+        Me.cerrarBtn.UseVisualStyleBackColor = False
+        '
         'SolicitudForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -282,6 +294,7 @@ Partial Class SolicitudForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(505, 332)
         Me.ControlBox = False
+        Me.Controls.Add(Me.cerrarBtn)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PesoBox)
         Me.Controls.Add(Me.dtpHora)
@@ -334,4 +347,5 @@ Partial Class SolicitudForm
     Friend WithEvents dtpHora As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents PesoBox As TextBox
+    Friend WithEvents cerrarBtn As Button
 End Class
