@@ -7,7 +7,8 @@ Public Class Paciente
     Private Edad As Integer
     Private Altura As Double
     Private Peso As Double
-    Private Citas As List(Of Cita)
+    Private Citas As New List(Of Cita)
+    Private Meds As New List(Of Recetado)
     Private Genero As String
     ' Cuando se registra el usuario
     Public Sub New(Cedula As String, Nombre As String, Telefono As String, Correo As String, Edad As Integer, Altura As Double, Genero As String)
@@ -114,6 +115,15 @@ Public Class Paciente
         End Get
         Set(value As String)
             Genero = value
+        End Set
+    End Property
+
+    Public Property MedsProp As List(Of Recetado)
+        Get
+            Return Meds
+        End Get
+        Set(value As List(Of Recetado))
+            Meds = value
         End Set
     End Property
 End Class

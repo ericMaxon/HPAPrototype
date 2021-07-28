@@ -1,14 +1,15 @@
-﻿Public Class Recetado
-    Private Nombre As String
+﻿Public Class Farmacia
+
     Private Codigo As Integer
     Private cantidad As Integer
-    Private dosis As String
+    Private cantPaquete As Integer
+    Private unidad As String
 
-    Public Sub New(_nombre As String, _codigo As Integer, _cantidad As Integer, _dosis As String)
-        Nombre = _nombre
+    Public Sub New(_codigo As Integer, _cantidad As Integer, _unidad As String, _cantPaquete As Integer)
         Codigo = _codigo
         cantidad = _cantidad
-        dosis = _dosis
+        unidad = _unidad
+        cantPaquete = _cantPaquete
     End Sub
 
     Public Property CodigoProp As Integer
@@ -29,21 +30,21 @@
         End Set
     End Property
 
-    Public Property DosisProp As String
+    Public Property unidadProp As String
         Get
-            Return dosis
+            Return unidad
         End Get
         Set(value As String)
-            dosis = value
+            unidad = value
         End Set
     End Property
 
-    Public Property NombreProp As String
+    Public Property CantPaqueteProp As Integer
         Get
-            Return Nombre
+            Return cantPaquete
         End Get
-        Set(value As String)
-            Nombre = value
+        Set(value As Integer)
+            cantPaquete = value
         End Set
     End Property
 End Class

@@ -1,19 +1,17 @@
-﻿Imports Microsoft.VisualBasic
-
-Public Class Medicamento
-
+﻿Public Class Medicamento
     Private Codigo As Integer
-    Private cantidad As Integer
-    Private canPaquete As Integer
-    Private unidad As String
+    Private Nombre As String
+    Private Imagen As String
+    Private CantXPaquete As Integer
+    Private Unidad As String
 
-    Public Sub New(_codigo As Integer, _cantidad As Integer, _cantPaquete As Integer, _unidad As String)
-        Codigo = _codigo
-        cantidad = _cantidad
-        cantPaquete = _cantPaquete
-        unidad = _unidad
+    Public Sub New(_Codigo As Integer, _Nombre As String, _Imagen As String, _Cant As Integer, _Unidad As String)
+        Codigo = _Codigo
+        Nombre = _Nombre
+        Imagen = _Imagen
+        CantXPaquete = _Cant
+        Unidad = _Unidad
     End Sub
-
     Public Property CodigoProp As Integer
         Get
             Return Codigo
@@ -23,30 +21,39 @@ Public Class Medicamento
         End Set
     End Property
 
-    Public Property CantidadProp As Integer
+    Public Property NombreProp As String
         Get
-            Return cantidad
+            Return Nombre
         End Get
-        Set(value As Integer)
-            cantidad = value
+        Set(value As String)
+            Nombre = value
         End Set
     End Property
 
-    Public Property CanPaqueteProp As Integer
+    Public Property ImagenProp As String
         Get
-            Return canPaquete
+            Return Imagen
+        End Get
+        Set(value As String)
+            Imagen = value
+        End Set
+    End Property
+
+    Public Property CantXPaqueteProp As Integer
+        Get
+            Return CantXPaquete
         End Get
         Set(value As Integer)
-            canPaquete = value
+            CantXPaquete = value
         End Set
     End Property
 
     Public Property UnidadProp As String
         Get
-            Return unidad
+            Return Unidad
         End Get
         Set(value As String)
-            unidad = value
+            Unidad = value
         End Set
     End Property
 End Class
