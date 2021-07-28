@@ -4,7 +4,8 @@
     Private Sub SolicitarButton_Click(sender As Object, e As EventArgs) Handles SolicitarButton.Click
         Dim index = cmbxDoctores.SelectedIndex
         SolicitarButton.Enabled = False
-        If index >= 0 Then
+
+        If index >= 0 And IsNumeric(PesoBox.Text) Then
             Dim docElegido = App.doctores.Find(Function(doctor)
                                                    Return doctor.NombreProp.Equals(cmbxDoctores.Items(index).ToString)
                                                End Function)
@@ -14,7 +15,8 @@
                 cedDoc:=docElegido.CedulaProp,
                 fecha:=dtpFecha.Value.Date,
                 hora:=dtpHora.Value.TimeOfDay,
-                motivo:=DescBox.Text)
+                motivo:=DescBox.Text,
+                peso:=PesoBox.Text)
             If respuesta > 0 Then
                 Me.Dispose()
             Else

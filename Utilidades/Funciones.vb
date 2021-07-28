@@ -170,7 +170,7 @@ Namespace Controlador
             Return citaPaciente
         End Function
         ' Agregar una cita a la base de datos
-        Public Function AgregarCita(cedPac As String, cedDoc As String, fecha As Date, hora As TimeSpan, motivo As String) As Integer
+        Public Function AgregarCita(cedPac As String, cedDoc As String, fecha As Date, hora As TimeSpan, motivo As String, peso As Double) As Integer
             Dim affectedRow = 0
             Dim loader As New Loading()
             Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
@@ -183,6 +183,7 @@ Namespace Controlador
                 comm.Parameters.AddWithValue("@FechaCita", fecha)
                 comm.Parameters.AddWithValue("@Hora", hora.ToString)
                 comm.Parameters.AddWithValue("Motivo", motivo)
+                comm.Parameters.AddWithValue("@Peso", peso)
                 Try
                     affectedRow = comm.ExecuteNonQuery()
                     If affectedRow > 0 Then
@@ -192,8 +193,8 @@ Namespace Controlador
                         Dim response = comm.ExecuteReader
                         If response.HasRows Then
                             While response.Read
-                                Dim tempCod = App.appUsuario.CitasProp.Last.CodigoProp + 3
-                                Dim nombreDoc = response("Nombre")
+                                Dim tempCod = App.appUsuario.CitasProp.Last.CodigoProp + 13
+                                Dim nombreDoc = response("Nombre").ToString
                                 Dim tempCita As New Cita(tempCod, nombreDoc, fecha, hora.ToString, motivo)
                                 App.appUsuario.CitasProp.Add(tempCita)
                                 Dim exito As New CitaAForm(fecha, hora.ToString, nombreDoc)

@@ -184,9 +184,9 @@ Partial Class Registrar
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(204, 287)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(42, 16)
+        Me.Label8.Size = New System.Drawing.Size(61, 16)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Altura"
+        Me.Label8.Text = "Altura(m)"
         '
         'tbxAltura
         '
