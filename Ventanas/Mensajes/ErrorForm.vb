@@ -8,6 +8,15 @@
         errLabel.Text = titulo
         errLblMsg.Text = msg
     End Sub
+    Public Sub New(msg As String)
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        errLblMsg.Text = msg
+
+    End Sub
     Private Sub OkInvButton_Click(sender As Object, e As EventArgs) Handles OkInvButton.Click
         Me.Dispose()
     End Sub

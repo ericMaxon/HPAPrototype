@@ -22,7 +22,6 @@ Partial Class App
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(App))
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.pnlMain = New System.Windows.Forms.Panel()
@@ -287,7 +286,6 @@ Partial Class App
         Me.pnlBtnCitas.ResumeLayout(False)
         Me.pnlBtnMed.ResumeLayout(False)
         Me.pnlBtnAccount.ResumeLayout(False)
-        Me.pnlBtnAccount.PerformLayout()
         Me.pnlBtnHome.ResumeLayout(False)
         Me.pnlBttmUI.ResumeLayout(False)
         Me.pnlRecentCel.ResumeLayout(False)

@@ -27,13 +27,13 @@ Partial Class ErrorForm
         Me.errLabel = New System.Windows.Forms.Label()
         Me.errLblMsg = New System.Windows.Forms.Label()
         Me.pnlTitle = New System.Windows.Forms.Panel()
+        Me.pbErr = New System.Windows.Forms.PictureBox()
         Me.pnlMsg = New System.Windows.Forms.Panel()
         Me.pnlBtn = New System.Windows.Forms.Panel()
-        Me.pbErr = New System.Windows.Forms.PictureBox()
         Me.pnlTitle.SuspendLayout()
+        CType(Me.pbErr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlMsg.SuspendLayout()
         Me.pnlBtn.SuspendLayout()
-        CType(Me.pbErr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OkInvButton
@@ -49,13 +49,12 @@ Partial Class ErrorForm
         '
         'errLabel
         '
-        Me.errLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.errLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.errLabel.Location = New System.Drawing.Point(0, 0)
         Me.errLabel.Margin = New System.Windows.Forms.Padding(114, 15, 115, 0)
         Me.errLabel.Name = "errLabel"
         Me.errLabel.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.errLabel.Size = New System.Drawing.Size(337, 65)
+        Me.errLabel.Size = New System.Drawing.Size(337, 30)
         Me.errLabel.TabIndex = 1
         Me.errLabel.Text = "ERROR"
         Me.errLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -82,6 +81,16 @@ Partial Class ErrorForm
         Me.pnlTitle.Size = New System.Drawing.Size(337, 65)
         Me.pnlTitle.TabIndex = 3
         '
+        'pbErr
+        '
+        Me.pbErr.Image = CType(resources.GetObject("pbErr.Image"), System.Drawing.Image)
+        Me.pbErr.Location = New System.Drawing.Point(155, 33)
+        Me.pbErr.Name = "pbErr"
+        Me.pbErr.Size = New System.Drawing.Size(32, 32)
+        Me.pbErr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.pbErr.TabIndex = 3
+        Me.pbErr.TabStop = False
+        '
         'pnlMsg
         '
         Me.pnlMsg.BackColor = System.Drawing.Color.Transparent
@@ -102,16 +111,6 @@ Partial Class ErrorForm
         Me.pnlBtn.Size = New System.Drawing.Size(337, 37)
         Me.pnlBtn.TabIndex = 5
         '
-        'pbErr
-        '
-        Me.pbErr.Image = CType(resources.GetObject("pbErr.Image"), System.Drawing.Image)
-        Me.pbErr.Location = New System.Drawing.Point(83, 12)
-        Me.pbErr.Name = "pbErr"
-        Me.pbErr.Size = New System.Drawing.Size(32, 32)
-        Me.pbErr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.pbErr.TabIndex = 3
-        Me.pbErr.TabStop = False
-        '
         'ErrorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -127,9 +126,9 @@ Partial Class ErrorForm
         Me.Text = "Inventario Bajo"
         Me.pnlTitle.ResumeLayout(False)
         Me.pnlTitle.PerformLayout()
+        CType(Me.pbErr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlMsg.ResumeLayout(False)
         Me.pnlBtn.ResumeLayout(False)
-        CType(Me.pbErr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

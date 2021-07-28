@@ -24,6 +24,10 @@ Partial Class CompraEForm
     Private Sub InitializeComponent()
         Me.OkCompraEButton = New System.Windows.Forms.Button()
         Me.CompraELabel = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'OkCompraEButton
@@ -31,7 +35,7 @@ Partial Class CompraEForm
         Me.OkCompraEButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.OkCompraEButton.FlatAppearance.BorderSize = 0
         Me.OkCompraEButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.OkCompraEButton.Location = New System.Drawing.Point(121, 106)
+        Me.OkCompraEButton.Location = New System.Drawing.Point(127, 20)
         Me.OkCompraEButton.Name = "OkCompraEButton"
         Me.OkCompraEButton.Size = New System.Drawing.Size(75, 23)
         Me.OkCompraEButton.TabIndex = 0
@@ -40,13 +44,32 @@ Partial Class CompraEForm
         '
         'CompraELabel
         '
-        Me.CompraELabel.AutoSize = True
+        Me.CompraELabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CompraELabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CompraELabel.Location = New System.Drawing.Point(73, 42)
+        Me.CompraELabel.Location = New System.Drawing.Point(0, 0)
         Me.CompraELabel.Name = "CompraELabel"
-        Me.CompraELabel.Size = New System.Drawing.Size(178, 25)
+        Me.CompraELabel.Size = New System.Drawing.Size(337, 58)
         Me.CompraELabel.TabIndex = 1
         Me.CompraELabel.Text = "Compra Exitosa"
+        Me.CompraELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.CompraELabel)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(337, 58)
+        Me.Panel1.TabIndex = 2
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.OkCompraEButton)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 92)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(337, 65)
+        Me.Panel2.TabIndex = 3
         '
         'CompraEForm
         '
@@ -56,17 +79,20 @@ Partial Class CompraEForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(337, 157)
         Me.ControlBox = False
-        Me.Controls.Add(Me.CompraELabel)
-        Me.Controls.Add(Me.OkCompraEButton)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CompraEForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Compra Exitosa"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents OkCompraEButton As Button
     Friend WithEvents CompraELabel As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class
