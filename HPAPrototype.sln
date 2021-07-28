@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HPAPrototype", "HPAPrototype.vbproj", "{2BEA8C16-17B2-4049-A84B-0D12534D32A7}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PF_EQ07_AppCitas", "PF_EQ07_AppCitas.vbproj", "{2BEA8C16-17B2-4049-A84B-0D12534D32A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

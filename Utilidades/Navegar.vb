@@ -25,4 +25,7 @@
     Public Sub AgregarPantalla(pantalla As Form)
         navegacion.Add(pantalla)
     End Sub
+    Public Sub EliminarPantallaa(pantalla As Form)
+        navegacion.Remove(pantalla)
+    End Sub
 End Class

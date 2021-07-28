@@ -11,45 +11,36 @@
         Navegacion = New Navegar(Me)
     End Sub
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        appUsuario.CitasProp = Controlador.ObtenerCitas(appUsuario.CedulaProp)
-        appUsuario.MedsProp = Controlador.ObtenerMedicantosUsuario(appUsuario.CedulaProp)
+        Dim loader As New Loading
+        loader.Show()
         doctores = Controlador.ObtenerDoctores
         medicamentos = Controlador.ObtenerMeds
         btnHome_Click(Me, EventArgs.Empty)
+        loader.Dispose()
     End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
         Dim pantalla As Form
         pantalla = pnlMain.Controls.OfType(Of pantallaANavegar).FirstOrDefault() ' Buscar si esta instanciada esta pantalla
-        ' Si no existe la pantalla creamos una nueva
         If IsNothing(pantalla) Then
             pantalla = New pantallaANavegar
-            'Estilizando la vista para que se acople a la pantalla principal
-            pantalla.TopLevel = False
-            pantalla.FormBorderStyle = FormBorderStyle.None
-            pantalla.Dock = DockStyle.Fill
-            ' Añadiendola al panel principal
-            pnlMain.Controls.Add(pantalla)
-            pnlMain.Tag = pantalla
-            ' Mostrando la pantalla
-            pantalla.Show()
-            pantalla.BringToFront()
-            Navegacion.AgregarPantalla(pantalla)
         Else
+            Navegacion.EliminarPantallaa(pantalla)
             pnlMain.Controls.Remove(pantalla)
+            pantalla.Dispose()
             pantalla = New pantallaANavegar
-            'Estilizando la vista para que se acople a la pantalla principal
-            pantalla.TopLevel = False
-            pantalla.FormBorderStyle = FormBorderStyle.None
-            pantalla.Dock = DockStyle.Fill
-            ' Añadiendola al panel principal
-            pnlMain.Controls.Add(pantalla)
-            pnlMain.Tag = pantalla
-            ' Mostrando la pantalla
-            pantalla.Show()
-            pantalla.BringToFront()
-            Navegacion.AgregarPantalla(pantalla)
         End If
+        'Estilizando la vista para que se acople a la pantalla principal
+        pantalla.TopLevel = False
+        pantalla.FormBorderStyle = FormBorderStyle.None
+        pantalla.Dock = DockStyle.Fill
+        ' Añadiendola al panel principal
+        pnlMain.Controls.Add(pantalla)
+        pnlMain.Tag = pantalla
+        ' Mostrando la pantalla
+        pantalla.Show()
+        pantalla.BringToFront()
+        Navegacion.AgregarPantalla(pantalla)
     End Sub
 #End Region
 

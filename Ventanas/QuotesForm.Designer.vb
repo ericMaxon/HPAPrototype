@@ -76,8 +76,9 @@ Partial Class QuotesForm
         Me.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tbxClmCodCita, Me.tbxClmFecha, Me.tbxClmNmDoc, Me.tbxColmHora})
         Me.dgvCitas.Location = New System.Drawing.Point(4, 147)
+        Me.dgvCitas.MaximumSize = New System.Drawing.Size(409, 289)
         Me.dgvCitas.Name = "dgvCitas"
-        Me.dgvCitas.Size = New System.Drawing.Size(396, 46)
+        Me.dgvCitas.Size = New System.Drawing.Size(409, 53)
         Me.dgvCitas.TabIndex = 18
         '
         'tbxClmCodCita
@@ -128,7 +129,7 @@ Partial Class QuotesForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.MicrosoftTeams_image__1_
-        Me.ClientSize = New System.Drawing.Size(398, 461)
+        Me.ClientSize = New System.Drawing.Size(414, 461)
         Me.ControlBox = False
         Me.Controls.Add(Me.dgvCitas)
         Me.Controls.Add(Me.PictureBox5)

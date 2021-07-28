@@ -61,16 +61,13 @@ Namespace Controlador
         ' Obtener medicamentos del usuario
         Public Function ObtenerMedicantosUsuario(cedUser As String) As List(Of Recetado)
             Dim lista As New List(Of Recetado)
-            Dim loader As New Loading
             Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
-                loader.Show()
                 connection.Open()
                 Dim comm As New SqlCommand("sp_UserMeds", connection)
                 comm.CommandType = CommandType.StoredProcedure
                 comm.Parameters.AddWithValue("@Cedula", cedUser)
                 Try
                     Dim respuesta = comm.ExecuteReader
-                    loader.Hide()
                     If respuesta.HasRows Then
                         While respuesta.Read
                             lista.Add(New Recetado(
@@ -82,7 +79,6 @@ Namespace Controlador
                         End While
                     End If
                 Catch ex As Exception
-                    loader.Hide()
                     Dim errForm = New ErrorForm("Error en la base de datos", "No se pudo ejecutar correctamente, contacte con soporte")
                     errForm.Show()
                 End Try
@@ -146,10 +142,8 @@ Namespace Controlador
         Public Function ObtenerCitas(cedula As String) As List(Of Cita)
             Dim response As SqlDataReader
             Dim citaPaciente As New List(Of Cita)
-            Dim loader As New Loading
             Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
                 connection.Open()
-                loader.Show()
                 Dim comm = New SqlCommand("sp_GetUserCitasPAC", connection)
                 comm.CommandType = CommandType.StoredProcedure
                 comm.Parameters.AddWithValue("@Cedula", cedula)
@@ -168,12 +162,10 @@ Namespace Controlador
                         End While
                     End If
                 Catch ex As Exception
-                    loader.Hide()
                     Dim errForm = New ErrorForm("Error en la base de datos", "No se pudo ejecutar correctamente, contacte con soporte")
                     errForm.Show()
                 End Try
                 connection.Close()
-                loader.Hide()
             End Using
             Return citaPaciente
         End Function
@@ -227,10 +219,8 @@ Namespace Controlador
         ' Obtener doctores
         Public Function ObtenerDoctores() As List(Of Doctor)
             Dim lista As New List(Of Doctor)
-            Dim loader As New Loading
             Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
                 connection.Open()
-                loader.Show()
                 Dim comm = New SqlCommand("sp_GetAllDoctors", connection)
                 Try
                     Dim response = comm.ExecuteReader
@@ -243,7 +233,6 @@ Namespace Controlador
                                       ))
                         End While
                     Else
-                        loader.Hide()
                         Dim errorForm = New ErrorForm("Error al ejecutar la consulta", "error db")
                         errorForm.Show()
                     End If
@@ -252,7 +241,6 @@ Namespace Controlador
                 End Try
                 connection.Close()
             End Using
-            loader.Hide()
             Return lista
         End Function
         ' obtener Medicamentos
@@ -334,8 +322,16 @@ Namespace Controlador
                 Try
                     affectedRow = comm.ExecuteNonQuery()
                     If affectedRow > 0 Then
-                        loader.Hide()
-                        Return affectedRow
+                        comm.Parameters.Clear()
+                        comm.CommandText = "sp_AddNewUser_Med"
+                        comm.Parameters.AddWithValue("@Cedula", App.appUsuario.CedulaProp)
+                        comm.Parameters.AddWithValue("@CodMed", codMed)
+                        comm.Parameters.AddWithValue("@Cantidad", cant)
+                        affectedRow = comm.ExecuteNonQuery()
+                        If affectedRow > 0 Then
+                            loader.Hide()
+                            Return affectedRow
+                        End If
                     Else
                         loader.Hide()
                         Dim errForm = New ErrorForm("Error", "Error no se pudo agregar la cita")
@@ -355,7 +351,9 @@ Namespace Controlador
         ''' Calcula la altura justa segun el tipo de elemento que se haya analizado.
         ''' </summary>
         ''' <param name="iniValue">Valor inicial o base del elemento a calcular la altura para mostrar.</param>
-        ''' <param name="elemento">Elemento de windows form al cual de antemano se hizo una evaluacion y se llego a una conclusion para obtener su altura perfecta o justa.</param>
+        ''' <param name="elemento">Elemento de windows form al cual de antemano se hizo una evaluacion y se llego a una conclusion para obtener su altura perfecta o justa.
+        ''' datagridview
+        ''' </param>
         ''' <returns>PerfectHeight Integer</returns>
         Public Function CalcularPerfectHeight(ByVal iniValue As Integer, Optional ByVal elemento As String = "")
             If elemento = "datagridview" Then

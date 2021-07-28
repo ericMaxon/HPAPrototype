@@ -66,6 +66,7 @@ Partial Class HomeForm
         Me.dgvCitas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.tbxClmCodCita, Me.tbxClmFecha, Me.tbxClmNmDoc, Me.tbxColmHora})
         Me.dgvCitas.Location = New System.Drawing.Point(3, 140)
         Me.dgvCitas.Margin = New System.Windows.Forms.Padding(0)
+        Me.dgvCitas.MaximumSize = New System.Drawing.Size(402, 107)
         Me.dgvCitas.Name = "dgvCitas"
         Me.dgvCitas.Size = New System.Drawing.Size(402, 48)
         Me.dgvCitas.TabIndex = 19
@@ -104,6 +105,7 @@ Partial Class HomeForm
         Me.dgvMeds.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dgvNombre, Me.dgvCantidad, Me.dgvDosis})
         Me.dgvMeds.Location = New System.Drawing.Point(8, 307)
         Me.dgvMeds.Margin = New System.Windows.Forms.Padding(0)
+        Me.dgvMeds.MaximumSize = New System.Drawing.Size(397, 107)
         Me.dgvMeds.Name = "dgvMeds"
         Me.dgvMeds.Size = New System.Drawing.Size(397, 61)
         Me.dgvMeds.TabIndex = 21
@@ -136,7 +138,7 @@ Partial Class HomeForm
         '
         'dgvCantidad
         '
-        Me.dgvCantidad.HeaderText = "Cantidad"
+        Me.dgvCantidad.HeaderText = "Cantidad (mg)"
         Me.dgvCantidad.Name = "dgvCantidad"
         Me.dgvCantidad.ReadOnly = True
         Me.dgvCantidad.Width = 115
