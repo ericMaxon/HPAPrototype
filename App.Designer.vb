@@ -42,7 +42,6 @@ Partial Class App
         Me.btnCelHome = New System.Windows.Forms.Button()
         Me.pnlCelGoBack = New System.Windows.Forms.Panel()
         Me.btnGoBack = New System.Windows.Forms.Button()
-        Me.DB_ProyectoFInal2021DataSet = New HPAPrototype.DB_ProyectoFInal2021DataSet()
         Me.pnlContainer.SuspendLayout()
         Me.pnlMain.SuspendLayout()
         Me.pnlTabs.SuspendLayout()
@@ -54,7 +53,6 @@ Partial Class App
         Me.pnlRecentCel.SuspendLayout()
         Me.pnlHomeCel.SuspendLayout()
         Me.pnlCelGoBack.SuspendLayout()
-        CType(Me.DB_ProyectoFInal2021DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlContainer
@@ -265,11 +263,6 @@ Partial Class App
         Me.btnGoBack.TabIndex = 0
         Me.btnGoBack.UseVisualStyleBackColor = True
         '
-        'DB_ProyectoFInal2021DataSet
-        '
-        Me.DB_ProyectoFInal2021DataSet.DataSetName = "DB_ProyectoFInal2021DataSet"
-        Me.DB_ProyectoFInal2021DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -291,7 +284,6 @@ Partial Class App
         Me.pnlRecentCel.ResumeLayout(False)
         Me.pnlHomeCel.ResumeLayout(False)
         Me.pnlCelGoBack.ResumeLayout(False)
-        CType(Me.DB_ProyectoFInal2021DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -320,5 +312,4 @@ Partial Class App
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnExit As Button
-    Friend WithEvents DB_ProyectoFInal2021DataSet As DB_ProyectoFInal2021DataSet
 End Class

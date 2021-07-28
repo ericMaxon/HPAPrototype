@@ -1,21 +1,21 @@
 ﻿Public Class App
     Public Shared appUsuario As Paciente
     Public Shared doctores As New List(Of Doctor)
+    Public Shared medicamentos As New List(Of Medicamento)
+    Public Shared Navegacion As Navegar
     Public Sub New(_usuario As Paciente)
-
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         appUsuario = _usuario
+        Navegacion = New Navegar(Me)
     End Sub
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim ingresoDiario As New PesoForm(appUsuario.CedulaProp)
         appUsuario.CitasProp = Controlador.ObtenerCitas(appUsuario.CedulaProp)
+        appUsuario.MedsProp = Controlador.ObtenerMedicantosUsuario(appUsuario.CedulaProp)
         doctores = Controlador.ObtenerDoctores
+        medicamentos = Controlador.ObtenerMeds
         btnHome_Click(Me, EventArgs.Empty)
-        ingresoDiario.Show()
-        ingresoDiario.BringToFront()
     End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
@@ -34,8 +34,21 @@
             ' Mostrando la pantalla
             pantalla.Show()
             pantalla.BringToFront()
+            Navegacion.AgregarPantalla(pantalla)
         Else
+            pnlMain.Controls.Remove(pantalla)
+            pantalla = New pantallaANavegar
+            'Estilizando la vista para que se acople a la pantalla principal
+            pantalla.TopLevel = False
+            pantalla.FormBorderStyle = FormBorderStyle.None
+            pantalla.Dock = DockStyle.Fill
+            ' Añadiendola al panel principal
+            pnlMain.Controls.Add(pantalla)
+            pnlMain.Tag = pantalla
+            ' Mostrando la pantalla
+            pantalla.Show()
             pantalla.BringToFront()
+            Navegacion.AgregarPantalla(pantalla)
         End If
     End Sub
 #End Region
@@ -66,10 +79,6 @@
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs)
         FinalizarForm.Show()
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
     End Sub
 
 #End Region
