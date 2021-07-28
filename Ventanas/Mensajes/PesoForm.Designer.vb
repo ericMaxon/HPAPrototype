@@ -26,13 +26,14 @@ Partial Class PesoForm
         Me.PesoLabel = New System.Windows.Forms.Label()
         Me.RegistroLabel = New System.Windows.Forms.Label()
         Me.PesoBox = New System.Windows.Forms.TextBox()
+        Me.cerrarBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'IngresarButton
         '
         Me.IngresarButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.IngresarButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.IngresarButton.Location = New System.Drawing.Point(149, 130)
+        Me.IngresarButton.Location = New System.Drawing.Point(211, 129)
         Me.IngresarButton.Name = "IngresarButton"
         Me.IngresarButton.Size = New System.Drawing.Size(75, 23)
         Me.IngresarButton.TabIndex = 0
@@ -69,6 +70,17 @@ Partial Class PesoForm
         Me.PesoBox.Text = "Peso"
         Me.PesoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'cerrarBtn
+        '
+        Me.cerrarBtn.BackColor = System.Drawing.Color.IndianRed
+        Me.cerrarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cerrarBtn.Location = New System.Drawing.Point(100, 129)
+        Me.cerrarBtn.Name = "cerrarBtn"
+        Me.cerrarBtn.Size = New System.Drawing.Size(75, 23)
+        Me.cerrarBtn.TabIndex = 24
+        Me.cerrarBtn.Text = "Cerrar"
+        Me.cerrarBtn.UseVisualStyleBackColor = False
+        '
         'PesoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -76,6 +88,7 @@ Partial Class PesoForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(190, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(388, 185)
         Me.ControlBox = False
+        Me.Controls.Add(Me.cerrarBtn)
         Me.Controls.Add(Me.PesoBox)
         Me.Controls.Add(Me.RegistroLabel)
         Me.Controls.Add(Me.PesoLabel)
@@ -93,4 +106,5 @@ Partial Class PesoForm
     Friend WithEvents PesoLabel As Label
     Friend WithEvents RegistroLabel As Label
     Friend WithEvents PesoBox As TextBox
+    Friend WithEvents cerrarBtn As Button
 End Class

@@ -29,6 +29,8 @@ Partial Class Ingresar
         Me.txtLogCedula = New System.Windows.Forms.TextBox()
         Me.txtLogTelef = New System.Windows.Forms.TextBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -89,6 +91,16 @@ Partial Class Ingresar
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.akar_icons_arrow_left
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 35)
+        Me.PictureBox1.TabIndex = 11
+        Me.PictureBox1.TabStop = False
+        '
         'Ingresar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -96,6 +108,7 @@ Partial Class Ingresar
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(398, 461)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.txtLogTelef)
         Me.Controls.Add(Me.txtLogCedula)
@@ -106,6 +119,7 @@ Partial Class Ingresar
         Me.Name = "Ingresar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingresar"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -117,4 +131,5 @@ Partial Class Ingresar
     Friend WithEvents txtLogCedula As TextBox
     Friend WithEvents txtLogTelef As TextBox
     Friend WithEvents btnIngresar As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -58,15 +58,39 @@ Namespace Controlador
             End Using
             Return pacienteInfo
         End Function
+        ' Obtener medicamentos del usuario
+        Public Function ObtenerMedicantosUsuario(cedUser As String) As List(Of Recetado)
+            Dim lista As New List(Of Recetado)
+            Dim loader As New Loading
+            Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
+                loader.Show()
+                connection.Open()
+                Dim comm As New SqlCommand("sp_UserMeds", connection)
+                comm.CommandType = CommandType.StoredProcedure
+                comm.Parameters.AddWithValue("@Cedula", cedUser)
+                Try
+                    Dim respuesta = comm.ExecuteReader
+                    loader.Hide()
+                    If respuesta.HasRows Then
+                        While respuesta.Read
+                            lista.Add(New Recetado(
+                                      respuesta("Nombre"),
+                                      respuesta("CodigoDelMedicamentos"),
+                                      respuesta("Cantidad"),
+                                      respuesta("Recurrencia")
+                                ))
+                        End While
+                    End If
+                Catch ex As Exception
+                    loader.Hide()
+                    Dim errForm = New ErrorForm("Error en la base de datos", "No se pudo ejecutar correctamente, contacte con soporte")
+                    errForm.Show()
+                End Try
+                connection.Close()
+            End Using
+            Return lista
+        End Function
         Public Function RegistrarUsuario(pacienteInfo As Paciente) As Integer
-            '@Cedula = '',
-            '@Nombre = '',
-            '@Telefono = '',
-            '@Correo = '',
-            '@Edad = ,
-            '@Altura = ,
-            '@Peso
-            Dim response As SqlDataReader
             Dim loader = New Loading()
             Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
                 connection.Open()
@@ -135,6 +159,7 @@ Namespace Controlador
                         While response.Read
                             citaPaciente.Add(
                                     New Cita(
+                                            response("Cod_Cita"),
                                             response("NombreDOC").ToString,
                                             response("FechaDeCita").ToString,
                                             response("Hora").ToString,
@@ -153,10 +178,9 @@ Namespace Controlador
             Return citaPaciente
         End Function
         ' Agregar una cita a la base de datos
-        Public Sub AgregarCita(cedPac As String, cedDoc As String, fecha As Date, hora As TimeSpan, motivo As String)
+        Public Function AgregarCita(cedPac As String, cedDoc As String, fecha As Date, hora As TimeSpan, motivo As String) As Integer
             Dim affectedRow = 0
             Dim loader As New Loading()
-
             Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
                 connection.Open()
                 loader.Show()
@@ -176,7 +200,11 @@ Namespace Controlador
                         Dim response = comm.ExecuteReader
                         If response.HasRows Then
                             While response.Read
-                                Dim exito As New CitaAForm(fecha, hora.ToString, response("Nombre"))
+                                Dim tempCod = App.appUsuario.CitasProp.Last.CodigoProp + 3
+                                Dim nombreDoc = response("Nombre")
+                                Dim tempCita As New Cita(tempCod, nombreDoc, fecha, hora.ToString, motivo)
+                                App.appUsuario.CitasProp.Add(tempCita)
+                                Dim exito As New CitaAForm(fecha, hora.ToString, nombreDoc)
                                 loader.Hide()
                                 exito.Show()
                             End While
@@ -194,7 +222,8 @@ Namespace Controlador
                 loader.Hide()
                 connection.Close()
             End Using
-        End Sub
+            Return affectedRow
+        End Function
         ' Obtener doctores
         Public Function ObtenerDoctores() As List(Of Doctor)
             Dim lista As New List(Of Doctor)
@@ -226,15 +255,111 @@ Namespace Controlador
             loader.Hide()
             Return lista
         End Function
-        ' Resumen:
-        '   Calcula la altura justa segun el tipo de elemento que se haya analizado.
-        ' Parametros:
-        '       inivalue: Valor inicial o base del elemento a calcular la altura para mostrar.
-        '       elemento: Elemento de windows form al cual de antemano se hizo una evaluacion y 
-        '                 se llego a una conclusion para obtener su altura perfecta o justa.
+        ' obtener Medicamentos
+        Public Function ObtenerMeds() As List(Of Medicamento)
+            Dim lista As New List(Of Medicamento)
+            Dim loader As New Loading
+            Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
+                connection.Open()
+                loader.Show()
+                Dim comm = New SqlCommand("sp_GetMeds", connection)
+                Try
+                    Dim response = comm.ExecuteReader
+                    If response.HasRows Then
+                        While response.Read
+                            lista.Add(New Medicamento(
+                                      response("CodMed"),
+                                      response("Nombre"),
+                                      response("Imagen"),
+                                      response("CantXPaquete"),
+                                      response("Unidad")
+                                      ))
+                        End While
+                    Else
+                        loader.Hide()
+                        Dim errorForm = New ErrorForm("Error al ejecutar la consulta", "error db")
+                        errorForm.Show()
+                    End If
+                Catch ex As Exception
+                    Return lista
+                End Try
+                connection.Close()
+            End Using
+            loader.Hide()
+            Return lista
+        End Function
+        Public Function ObtenerFarmacias(codMed As Integer) As List(Of Farmacia)
+            Dim lista As New List(Of Farmacia)
+            Dim loader As New Loading
+            Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
+                connection.Open()
+                loader.Show()
+                Dim comm = New SqlCommand("sp_ObtenerFarmaciasSegunMedicamentos", connection)
+                comm.CommandType = CommandType.StoredProcedure
+                comm.Parameters.AddWithValue("@CodMed", codMed)
+                Try
+                    Dim response = comm.ExecuteReader
+                    If response.HasRows Then
+                        While response.Read
+                            lista.Add(New Farmacia(
+                                      response("Cod_Farmacia"),
+                                      response("Cantidad"),
+                                      response("Unidad"),
+                                      response("CantXPaquete")
+                                      ))
+                        End While
+                    End If
+                Catch ex As Exception
+                    loader.Hide()
+                    Dim errorForm = New ErrorForm("Error al ejecutar la consulta", "error db")
+                    errorForm.Show()
+                End Try
+                connection.Close()
+            End Using
+            loader.Hide()
+            Return lista
+        End Function
+        Public Function ActualizarFarmacia(codFarm As Integer, codMed As Integer, cant As Integer) As Integer
+            Dim affectedRow = 0
+            Dim loader As New Loading()
+
+            Using connection As New SqlConnection(My.MySettings.Default.DB_ProyectoFInal2021ConnectionString)
+                connection.Open()
+                loader.Show()
+                Dim comm = New SqlCommand("sp_UpdateFarmaciaElegida", connection)
+                comm.CommandType = CommandType.StoredProcedure
+                comm.Parameters.AddWithValue("@CodFarmacia", codFarm)
+                comm.Parameters.AddWithValue("@CodMed", codMed)
+                comm.Parameters.AddWithValue("@Cant", cant)
+                Try
+                    affectedRow = comm.ExecuteNonQuery()
+                    If affectedRow > 0 Then
+                        loader.Hide()
+                        Return affectedRow
+                    Else
+                        loader.Hide()
+                        Dim errForm = New ErrorForm("Error", "Error no se pudo agregar la cita")
+                        errForm.Show()
+                        Return affectedRow
+                    End If
+                Catch ex As Exception
+                    loader.Hide()
+                    Dim errForm = New ErrorForm("Error", $"Error en la base de datos, {ex.Message}")
+                    errForm.Show()
+                End Try
+                loader.Hide()
+                connection.Close()
+            End Using
+        End Function
+        ''' <summary>
+        ''' Calcula la altura justa segun el tipo de elemento que se haya analizado.
+        ''' </summary>
+        ''' <param name="iniValue">Valor inicial o base del elemento a calcular la altura para mostrar.</param>
+        ''' <param name="elemento">Elemento de windows form al cual de antemano se hizo una evaluacion y se llego a una conclusion para obtener su altura perfecta o justa.</param>
+        ''' <returns>PerfectHeight Integer</returns>
         Public Function CalcularPerfectHeight(ByVal iniValue As Integer, Optional ByVal elemento As String = "")
             If elemento = "datagridview" Then
-                Return iniValue * 30
+                Return iniValue * 20
             End If
             Return iniValue
         End Function

@@ -12,6 +12,7 @@
         If IsNumeric(PesoBox.Text) Then
             Dim seIngreso = Controlador.EditarPeso(cedulaUsuario, peso:=PesoBox.Text)
             If seIngreso Then
+                App.appUsuario.PesoProp = PesoBox.Text
                 Dim exito As New CompraEForm("Actualizado")
                 Me.Hide()
                 exito.Show()
@@ -22,4 +23,7 @@
         End If
     End Sub
 
+    Private Sub cerrarBtn_Click(sender As Object, e As EventArgs) Handles cerrarBtn.Click
+        Me.Dispose()
+    End Sub
 End Class

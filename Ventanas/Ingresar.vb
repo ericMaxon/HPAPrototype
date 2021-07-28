@@ -1,6 +1,13 @@
 ﻿Public Class Ingresar
+    Private nav As Navegar
+    Public Sub New(_nav As Navegar)
 
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
 
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        nav = _nav
+    End Sub
     Private Sub TextBox1_MouseEnter(sender As Object, e As EventArgs) Handles txtLogCedula.MouseEnter
         If txtLogCedula.Text = "cedula 8-888-8888" Then
             txtLogCedula.Text = ""
@@ -50,5 +57,9 @@
 
     Private Sub Ingresar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        nav.Regresar(Me)
     End Sub
 End Class

@@ -68,10 +68,12 @@ Partial Class Login
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(398, 461)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnLogRegistrarse)
         Me.Controls.Add(Me.btnLogIngresar)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
