@@ -1,6 +1,8 @@
 ﻿Public Class Navegar
     Private navegacion As New List(Of Form)
+    Private _main As Form
     Public Sub New(ventanaActual As Form)
+        _main = ventanaActual
         navegacion.Add(ventanaActual)
     End Sub
     ' Navega a la nueva ventana ocultando la anterior en el procesos
@@ -19,5 +21,8 @@
     Public Sub Mostrar(ventana As Form)
         navegacion.Add(ventana)
         navegacion.Last.Show()
+    End Sub
+    Public Sub AgregarPantalla(pantalla As Form)
+        navegacion.Add(pantalla)
     End Sub
 End Class
