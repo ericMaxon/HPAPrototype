@@ -1,13 +1,9 @@
 ﻿Public Class HomeForm
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim maxHeight = 107
-
-        If App.appUsuario.CitasProp.Count > 3 Then
-            dgvCitas.Height = maxHeight
-        End If
-        If App.appUsuario.MedsProp.Count > 3 Then
-            dgvMeds.Height = maxHeight
-        End If
+        App.appUsuario.CitasProp = Controlador.ObtenerCitas(App.appUsuario.CedulaProp)
+        App.appUsuario.MedsProp = Controlador.ObtenerMedicantosUsuario(App.appUsuario.CedulaProp)
+        dgvCitas.Height = Controlador.CalcularPerfectHeight(dgvCitas.Height, "datagridview")
+        dgvMeds.Height = Controlador.CalcularPerfectHeight(dgvMeds.Height, "datagridview")
 
         App.appUsuario.CitasProp.ForEach(Sub(cita)
                                              dgvCitas.Rows.Add(cita.CodigoProp, cita.FechaDeCitaProp, cita.NombreDOCProp, cita.HoraProp)

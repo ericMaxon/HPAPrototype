@@ -334,8 +334,16 @@ Namespace Controlador
                 Try
                     affectedRow = comm.ExecuteNonQuery()
                     If affectedRow > 0 Then
-                        loader.Hide()
-                        Return affectedRow
+                        comm.Parameters.Clear()
+                        comm.CommandText = "sp_AddNewUser_Med"
+                        comm.Parameters.AddWithValue("@Cedula", App.appUsuario.CedulaProp)
+                        comm.Parameters.AddWithValue("@CodMed", codMed)
+                        comm.Parameters.AddWithValue("@Cantidad", cant)
+                        affectedRow = comm.ExecuteNonQuery()
+                        If affectedRow > 0 Then
+                            loader.Hide()
+                            Return affectedRow
+                        End If
                     Else
                         loader.Hide()
                         Dim errForm = New ErrorForm("Error", "Error no se pudo agregar la cita")
@@ -355,7 +363,9 @@ Namespace Controlador
         ''' Calcula la altura justa segun el tipo de elemento que se haya analizado.
         ''' </summary>
         ''' <param name="iniValue">Valor inicial o base del elemento a calcular la altura para mostrar.</param>
-        ''' <param name="elemento">Elemento de windows form al cual de antemano se hizo una evaluacion y se llego a una conclusion para obtener su altura perfecta o justa.</param>
+        ''' <param name="elemento">Elemento de windows form al cual de antemano se hizo una evaluacion y se llego a una conclusion para obtener su altura perfecta o justa.
+        ''' datagridview
+        ''' </param>
         ''' <returns>PerfectHeight Integer</returns>
         Public Function CalcularPerfectHeight(ByVal iniValue As Integer, Optional ByVal elemento As String = "")
             If elemento = "datagridview" Then
