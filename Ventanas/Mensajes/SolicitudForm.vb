@@ -3,9 +3,8 @@
 
     Private Sub SolicitarButton_Click(sender As Object, e As EventArgs) Handles SolicitarButton.Click
         Dim index = cmbxDoctores.SelectedIndex
-        SolicitarButton.Enabled = False
-
         If index >= 0 And IsNumeric(PesoBox.Text) Then
+            SolicitarButton.Enabled = False
             Dim docElegido = App.doctores.Find(Function(doctor)
                                                    Return doctor.NombreProp.Equals(cmbxDoctores.Items(index).ToString)
                                                End Function)
@@ -22,6 +21,10 @@
             Else
                 SolicitarButton.Enabled = True
             End If
+        Else
+
+            Dim errForm = New ErrorForm("Error", "Datos incompleto")
+            errForm.Show()
         End If
 
     End Sub

@@ -67,7 +67,7 @@ Partial Class PesoForm
         Me.PesoBox.Name = "PesoBox"
         Me.PesoBox.Size = New System.Drawing.Size(100, 20)
         Me.PesoBox.TabIndex = 3
-        Me.PesoBox.Text = "Peso"
+        Me.PesoBox.Text = "Peso (kg)"
         Me.PesoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cerrarBtn

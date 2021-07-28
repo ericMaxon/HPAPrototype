@@ -187,6 +187,8 @@ Namespace Controlador
                 Try
                     affectedRow = comm.ExecuteNonQuery()
                     If affectedRow > 0 Then
+                        EditarPeso(cedPac, peso)
+                        App.appUsuario.PesoProp = peso
                         comm.Parameters.Clear()
                         comm.CommandText = "sp_GetSelectedDoc"
                         comm.Parameters.AddWithValue("@Cedula", cedDoc)
@@ -194,7 +196,7 @@ Namespace Controlador
                         If response.HasRows Then
                             While response.Read
                                 Dim tempCod = App.appUsuario.CitasProp.Last.CodigoProp + 13
-                                Dim nombreDoc = response("Nombre").ToString
+                                Dim nombreDoc = response("Nombre")
                                 Dim tempCita As New Cita(tempCod, nombreDoc, fecha, hora.ToString, motivo)
                                 App.appUsuario.CitasProp.Add(tempCita)
                                 Dim exito As New CitaAForm(fecha, hora.ToString, nombreDoc)
