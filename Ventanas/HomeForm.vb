@@ -1,5 +1,6 @@
 ﻿Public Class HomeForm
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         App.appUsuario.CitasProp = Controlador.ObtenerCitas(App.appUsuario.CedulaProp)
         App.appUsuario.MedsProp = Controlador.ObtenerMedicantosUsuario(App.appUsuario.CedulaProp)
         dgvCitas.Height = Controlador.CalcularPerfectHeight(dgvCitas.Height, "datagridview")

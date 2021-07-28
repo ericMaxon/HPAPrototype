@@ -11,11 +11,12 @@
         Navegacion = New Navegar(Me)
     End Sub
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        appUsuario.CitasProp = Controlador.ObtenerCitas(appUsuario.CedulaProp)
-        appUsuario.MedsProp = Controlador.ObtenerMedicantosUsuario(appUsuario.CedulaProp)
+        Dim loader As New Loading
+        loader.Show()
         doctores = Controlador.ObtenerDoctores
         medicamentos = Controlador.ObtenerMeds
         btnHome_Click(Me, EventArgs.Empty)
+        loader.Dispose()
     End Sub
 #Region "Funciones auxiliares del app"
     Public Sub IrA(Of pantallaANavegar As {Form, New})() ' As {Form, New} agregar esto cuando crees las pantallas
