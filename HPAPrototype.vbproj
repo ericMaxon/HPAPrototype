@@ -88,6 +88,9 @@
     <Compile Include="DB_ProyectoFInal2021DataSet.vb">
       <DependentUpon>DB_ProyectoFInal2021DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Cita.vb" />
+    <Compile Include="Entidades\Doctor.vb" />
+    <Compile Include="Entidades\Paciente.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -104,10 +107,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilidades\Funciones.vb" />
+    <Compile Include="Utilidades\Navegar.vb" />
     <Compile Include="Ventanas\AccountForm.Designer.vb">
       <DependentUpon>AccountForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\AccountForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Componentes\Loading.Designer.vb">
+      <DependentUpon>Loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Componentes\Loading.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\HomeForm.Designer.vb">
@@ -132,6 +143,48 @@
       <DependentUpon>MedsForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\MedsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CitaAForm.Designer.vb">
+      <DependentUpon>CitaAForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CitaAForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CompraEForm.Designer.vb">
+      <DependentUpon>CompraEForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\CompraEForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FarmaciasForm.Designer.vb">
+      <DependentUpon>FarmaciasForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FarmaciasForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FinalizarForm.Designer.vb">
+      <DependentUpon>FinalizarForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\FinalizarForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\PesoForm.Designer.vb">
+      <DependentUpon>PesoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\PesoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\ErrorForm.Designer.vb">
+      <DependentUpon>ErrorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\ErrorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\SolicitudForm.Designer.vb">
+      <DependentUpon>SolicitudForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Mensajes\SolicitudForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\QuotesForm.Designer.vb">
@@ -161,6 +214,9 @@
     <EmbeddedResource Include="Ventanas\AccountForm.resx">
       <DependentUpon>AccountForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Componentes\Loading.resx">
+      <DependentUpon>Loading.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\HomeForm.resx">
       <DependentUpon>HomeForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +228,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\MedsForm.resx">
       <DependentUpon>MedsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\CitaAForm.resx">
+      <DependentUpon>CitaAForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\CompraEForm.resx">
+      <DependentUpon>CompraEForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\FarmaciasForm.resx">
+      <DependentUpon>FarmaciasForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\FinalizarForm.resx">
+      <DependentUpon>FinalizarForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\PesoForm.resx">
+      <DependentUpon>PesoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\ErrorForm.resx">
+      <DependentUpon>ErrorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Mensajes\SolicitudForm.resx">
+      <DependentUpon>SolicitudForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\QuotesForm.resx">
       <DependentUpon>QuotesForm.vb</DependentUpon>
@@ -204,10 +281,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Utilidades\" />
+    <None Include="Resources\MicrosoftTeams-image %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\akar-icons_arrow-left.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

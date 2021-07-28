@@ -49,14 +49,13 @@
         Application.Exit()
     End Sub
 
-    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
-
+    Private Sub btnExit_Click(sender As Object, e As EventArgs)
+        FinalizarForm.Show()
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Application.Exit()
-    End Sub
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
+    End Sub
 
 #End Region
 End Class

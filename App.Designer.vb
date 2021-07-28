@@ -22,19 +22,13 @@ Partial Class App
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(App))
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.btnExit = New System.Windows.Forms.Button()
-        Me.lblHeaderTitle = New System.Windows.Forms.Label()
         Me.pnlTopUI = New System.Windows.Forms.Panel()
         Me.pnlTabs = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlBtnCitas = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCitas = New System.Windows.Forms.Button()
         Me.pnlBtnMed = New System.Windows.Forms.Panel()
         Me.btnMedicamentos = New System.Windows.Forms.Button()
@@ -49,9 +43,9 @@ Partial Class App
         Me.btnCelHome = New System.Windows.Forms.Button()
         Me.pnlCelGoBack = New System.Windows.Forms.Panel()
         Me.btnGoBack = New System.Windows.Forms.Button()
+        Me.DB_ProyectoFInal2021DataSet = New HPAPrototype.DB_ProyectoFInal2021DataSet()
         Me.pnlContainer.SuspendLayout()
         Me.pnlMain.SuspendLayout()
-        Me.pnlHeader.SuspendLayout()
         Me.pnlTabs.SuspendLayout()
         Me.pnlBtnCitas.SuspendLayout()
         Me.pnlBtnMed.SuspendLayout()
@@ -61,6 +55,7 @@ Partial Class App
         Me.pnlRecentCel.SuspendLayout()
         Me.pnlHomeCel.SuspendLayout()
         Me.pnlCelGoBack.SuspendLayout()
+        CType(Me.DB_ProyectoFInal2021DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlContainer
@@ -70,55 +65,21 @@ Partial Class App
         Me.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContainer.Location = New System.Drawing.Point(0, 0)
         Me.pnlContainer.Name = "pnlContainer"
-        Me.pnlContainer.Size = New System.Drawing.Size(414, 736)
+        Me.pnlContainer.Size = New System.Drawing.Size(414, 729)
         Me.pnlContainer.TabIndex = 0
         '
         'pnlMain
         '
-        Me.pnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.pnlMain.Controls.Add(Me.pnlHeader)
+        Me.pnlMain.BackColor = System.Drawing.Color.White
+        Me.pnlMain.BackgroundImage = Global.HPAPrototype.My.Resources.Resources.MicrosoftTeams_image__1_
         Me.pnlMain.Controls.Add(Me.pnlTopUI)
         Me.pnlMain.Controls.Add(Me.pnlTabs)
         Me.pnlMain.Controls.Add(Me.pnlBttmUI)
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMain.Location = New System.Drawing.Point(0, 0)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(414, 736)
+        Me.pnlMain.Size = New System.Drawing.Size(414, 729)
         Me.pnlMain.TabIndex = 2
-        '
-        'pnlHeader
-        '
-        Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlHeader.Controls.Add(Me.btnExit)
-        Me.pnlHeader.Controls.Add(Me.lblHeaderTitle)
-        Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlHeader.Location = New System.Drawing.Point(0, 28)
-        Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(414, 58)
-        Me.pnlHeader.TabIndex = 1
-        '
-        'btnExit
-        '
-        Me.btnExit.BackgroundImage = CType(resources.GetObject("btnExit.BackgroundImage"), System.Drawing.Image)
-        Me.btnExit.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnExit.FlatAppearance.BorderSize = 0
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Location = New System.Drawing.Point(365, 12)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(37, 33)
-        Me.btnExit.TabIndex = 2
-        Me.btnExit.UseVisualStyleBackColor = True
-        '
-        'lblHeaderTitle
-        '
-        Me.lblHeaderTitle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblHeaderTitle.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeaderTitle.Location = New System.Drawing.Point(0, 0)
-        Me.lblHeaderTitle.Name = "lblHeaderTitle"
-        Me.lblHeaderTitle.Size = New System.Drawing.Size(414, 58)
-        Me.lblHeaderTitle.TabIndex = 1
-        Me.lblHeaderTitle.Text = "EMPRESEA SYJE"
-        Me.lblHeaderTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTopUI
         '
@@ -131,64 +92,24 @@ Partial Class App
         '
         'pnlTabs
         '
-        Me.pnlTabs.BackColor = System.Drawing.Color.FromArgb(CType(CType(132, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlTabs.Controls.Add(Me.Label4)
-        Me.pnlTabs.Controls.Add(Me.Label3)
-        Me.pnlTabs.Controls.Add(Me.Label1)
+        Me.pnlTabs.BackColor = System.Drawing.Color.WhiteSmoke
         Me.pnlTabs.Controls.Add(Me.pnlBtnCitas)
         Me.pnlTabs.Controls.Add(Me.pnlBtnMed)
         Me.pnlTabs.Controls.Add(Me.pnlBtnAccount)
         Me.pnlTabs.Controls.Add(Me.pnlBtnHome)
         Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 586)
+        Me.pnlTabs.Location = New System.Drawing.Point(0, 591)
         Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Size = New System.Drawing.Size(414, 98)
+        Me.pnlTabs.Size = New System.Drawing.Size(414, 86)
         Me.pnlTabs.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(335, 66)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Cuenta"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(217, 66)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Medicamentos"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 66)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Menú Principal"
         '
         'pnlBtnCitas
         '
-        Me.pnlBtnCitas.Controls.Add(Me.Label2)
         Me.pnlBtnCitas.Controls.Add(Me.btnCitas)
         Me.pnlBtnCitas.Location = New System.Drawing.Point(116, 6)
         Me.pnlBtnCitas.Name = "pnlBtnCitas"
         Me.pnlBtnCitas.Size = New System.Drawing.Size(73, 73)
         Me.pnlBtnCitas.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(19, 60)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Citas"
         '
         'btnCitas
         '
@@ -228,7 +149,7 @@ Partial Class App
         '
         Me.pnlBtnAccount.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pnlBtnAccount.Controls.Add(Me.btnAccount)
-        Me.pnlBtnAccount.Location = New System.Drawing.Point(312, 6)
+        Me.pnlBtnAccount.Location = New System.Drawing.Point(315, 6)
         Me.pnlBtnAccount.Name = "pnlBtnAccount"
         Me.pnlBtnAccount.Size = New System.Drawing.Size(73, 73)
         Me.pnlBtnAccount.TabIndex = 3
@@ -277,7 +198,7 @@ Partial Class App
         Me.pnlBttmUI.Controls.Add(Me.pnlHomeCel)
         Me.pnlBttmUI.Controls.Add(Me.pnlCelGoBack)
         Me.pnlBttmUI.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlBttmUI.Location = New System.Drawing.Point(0, 684)
+        Me.pnlBttmUI.Location = New System.Drawing.Point(0, 677)
         Me.pnlBttmUI.Name = "pnlBttmUI"
         Me.pnlBttmUI.Size = New System.Drawing.Size(414, 52)
         Me.pnlBttmUI.TabIndex = 0
@@ -345,11 +266,16 @@ Partial Class App
         Me.btnGoBack.TabIndex = 0
         Me.btnGoBack.UseVisualStyleBackColor = True
         '
+        'DB_ProyectoFInal2021DataSet
+        '
+        Me.DB_ProyectoFInal2021DataSet.DataSetName = "DB_ProyectoFInal2021DataSet"
+        Me.DB_ProyectoFInal2021DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 736)
+        Me.ClientSize = New System.Drawing.Size(414, 729)
         Me.Controls.Add(Me.pnlContainer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "App"
@@ -357,26 +283,23 @@ Partial Class App
         Me.Text = "Form1"
         Me.pnlContainer.ResumeLayout(False)
         Me.pnlMain.ResumeLayout(False)
-        Me.pnlHeader.ResumeLayout(False)
         Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.pnlBtnCitas.ResumeLayout(False)
-        Me.pnlBtnCitas.PerformLayout()
         Me.pnlBtnMed.ResumeLayout(False)
         Me.pnlBtnAccount.ResumeLayout(False)
+        Me.pnlBtnAccount.PerformLayout()
         Me.pnlBtnHome.ResumeLayout(False)
         Me.pnlBttmUI.ResumeLayout(False)
         Me.pnlRecentCel.ResumeLayout(False)
         Me.pnlHomeCel.ResumeLayout(False)
         Me.pnlCelGoBack.ResumeLayout(False)
+        CType(Me.DB_ProyectoFInal2021DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents pnlContainer As Panel
     Friend WithEvents pnlMain As Panel
-    Friend WithEvents pnlHeader As Panel
-    Friend WithEvents lblHeaderTitle As Label
     Friend WithEvents pnlTopUI As Panel
     Friend WithEvents pnlTabs As Panel
     Friend WithEvents pnlBtnCitas As Panel
@@ -399,4 +322,5 @@ Partial Class App
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnExit As Button
+    Friend WithEvents DB_ProyectoFInal2021DataSet As DB_ProyectoFInal2021DataSet
 End Class

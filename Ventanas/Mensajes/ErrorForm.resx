@@ -117,17 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="string1" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MicrosoftTeams-image (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MicrosoftTeams-image (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="akar-icons_arrow-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\akar-icons_arrow-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbErr.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAUBJREFUWEfVV8GNwjAQTClXCj+WLujk6OZ0UASlUEJK4HZ8kyM2G3uNWCW30iiK
+        PZ6ZrA1Khk3Vl8juInI97/fjWeT+biRtkSPt8tLJz3JBFOBF29/SwWNJiga6Tfv09GiNSYwCPGmfOmCS
+        QnE4jLRfKYCC9q4AN+wZrsW4BTeX9s0AEPwAD1fcF/Nz9HBdAf4Ep6oI93ATSFsOoAKPn8qsDOEn86mg
+        MeNlIKWvA1PNQng4lnb/GSgL46+aA6Q2AwCLIazymAOkuwIArhBec4BL3AGAaogec4DL/k+AVbdg1UO4
+        aI7x2hzWFloZSK0GqJpj3smxtNsBVGB7f8WG+SvcBNL8Z6AlqOjhugMAEF7thSQMtNcAQR8iLdB+A6/l
+        3DOTGAX1zD/RvkVOFjEC8KJtXkgVth16zqCNbtNuCzUMP5eTYcMEdgdoAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>
