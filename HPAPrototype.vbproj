@@ -92,7 +92,10 @@
     </Compile>
     <Compile Include="Entidades\Cita.vb" />
     <Compile Include="Entidades\Doctor.vb" />
+    <Compile Include="Entidades\Medicamento.vb" />
     <Compile Include="Entidades\Paciente.vb" />
+    <Compile Include="Entidades\Farmacia.vb" />
+    <Compile Include="Entidades\Recetado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
